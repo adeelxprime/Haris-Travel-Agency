@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Haris Travel Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- ========================================================
+       1. LOGIN SCREEN (Visible if not authenticated)
+       ======================================================== -->
+  <div id="login-screen-wrap" class="login-screen-wrap">
+    <div class="login-card">
+      <div class="login-header">
+        <div class="login-logo">
+          <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="21" fill="none" stroke="#14A3A0" stroke-width="2.5"/>
+            <ellipse cx="24" cy="24" rx="9" ry="21" fill="none" stroke="#14A3A0" stroke-width="1.2" opacity=".6"/>
+            <path d="M3 24h42" stroke="#14A3A0" stroke-width="1.2" opacity=".6"/>
+            <path d="M12 33 33 12l-3 12 6 2-3 3-7-1-4 7-3-1 1-8z" fill="#C9A24B" transform="rotate(-8 24 24)"/>
+          </svg>
+        </div>
+        <h1>Haris Travel Agency</h1>
+        <p>Admin Portal &amp; Management Dashboard</p>
+      </div>
+
+      <form id="admin-login-form" class="login-form">
+        <div class="form-group">
+          <label for="username">Admin Username</label>
+          <input type="text" id="username" name="username" required placeholder="admin" autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <div id="login-error-msg" style="color: var(--admin-danger); font-size: 0.88rem; font-weight: 600; margin-bottom: 14px; min-height: 1.2em;"></div>
+        <button type="submit" class="login-btn">Sign In to Dashboard</button>
+        <div class="login-hint">
+          <b>Admin Password:</b><br>
+          Username: <code>admin</code> | Password: <code>569646</code>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       2. ADMIN MAIN DASHBOARD LAYOUT (Visible when logged in)
+       ======================================================== -->
+  <div id="admin-layout" class="admin-layout" style="display: none;">
+    <!-- Sidebar Navigation -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <svg width="32" height="32" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="21" fill="none" stroke="#14A3A0" stroke-width="2.5"/>
+            <ellipse cx="24" cy="24" rx="9" ry="21" fill="none" stroke="#14A3A0" stroke-width="1.2" opacity=".6"/>
+            <path d="M3 24h42" stroke="#14A3A0" stroke-width="1.2" opacity=".6"/>
+            <path d="M12 33 33 12l-3 12 6 2-3 3-7-1-4 7-3-1 1-8z" fill="#C9A24B" transform="rotate(-8 24 24)"/>
+          </svg>
+          <div>
+            <span>Haris Travel</span>
+            <small>Admin Panel</small>
+          </div>
+        </div>
+      </div>
+
+      <ul class="sidebar-nav">
+        <li>
+          <button type="button" class="nav-tab-btn active" data-tab="social">
+            <span>📱</span>
+            <span>Social Media Links</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="nav-tab-btn" data-tab="services">
+            <span>🧳</span>
+            <span>Offer &amp; Manage Services</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="nav-tab-btn" data-tab="destinations">
+            <span>🌍</span>
+            <span>Manage Destinations</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="nav-tab-btn" data-tab="agency">
+            <span>🏢</span>
+            <span>Agency &amp; Contact Info</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="nav-tab-btn" data-tab="inquiries">
+            <span>📩</span>
+            <span>Customer Quotes</span>
+            <span class="badge-pill" id="inquiries-badge" style="display: none;">0</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="nav-tab-btn" data-tab="security">
+            <span>🔒</span>
+            <span>Security &amp; Password</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <a href="index.html" target="_blank" class="view-site-link">
+          <span>🌐 View Live Website</span>
+        </a>
+        <button type="button" class="logout-btn" id="logout-btn">
+          Sign Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+      <!-- Topbar -->
+      <div class="admin-topbar">
+        <div>
+          <h2>Management Dashboard</h2>
+          <p style="color: var(--admin-muted); font-size: 0.9rem;">Manage social links, active travel services, tour destinations, and customer inquiries.</p>
+        </div>
+        <div class="admin-user-tag">
+          <i></i>
+          <span>Signed in as <b>Admin</b></span>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon teal">🧳</div>
+          <div>
+            <div class="stat-val" id="stat-services-count">0</div>
+            <div class="stat-label">Active Services Offered</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon gold">🌍</div>
+          <div>
+            <div class="stat-val" id="stat-destinations-count">0</div>
+            <div class="stat-label">Destinations Planned</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">💬</div>
+          <div>
+            <div class="stat-val" style="font-size: 1.1rem;" id="stat-whatsapp-display">+92 314 2554547</div>
+            <div class="stat-label">WhatsApp Connected</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon blue">📩</div>
+          <div>
+            <div class="stat-val" id="stat-inquiries-count">0</div>
+            <div class="stat-label">Total Inquiries Received</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           TAB 1: SOCIAL MEDIA LINKS (Instagram, Facebook, WhatsApp)
+           ======================================================== -->
+      <div class="tab-pane active" id="tab-social">
+        <div class="admin-card">
+          <div class="card-title-bar">
+            <h3>📱 Manage Social Media Links</h3>
+            <span style="font-size: 0.82rem; font-weight: 700; color: var(--admin-teal); background: var(--admin-teal-light); padding: 4px 12px; border-radius: 999px;">
+              Only 3 Channels: Facebook, Instagram &amp; WhatsApp
+            </span>
+          </div>
+          <p class="card-desc">
+            Apny official social media accounts k links yahan enter karein. Ye 3 accounts website k header, footer, or social section me live update ho jayengy.
+          </p>
+
+          <form id="social-links-form">
+            <!-- 1. Facebook -->
+            <div class="admin-form-group">
+              <label for="social-fb-input">
+                <span style="color: #1877F2; font-size: 1.1rem; vertical-align: middle;">📘</span>
+                Facebook Page Link
+              </label>
+              <div style="display: flex; gap: 10px;">
+                <input type="url" id="social-fb-input" placeholder="https://facebook.com/yourpage" required style="flex: 1;">
+                <button type="button" class="btn-secondary" id="test-fb-btn" style="flex-shrink: 0;">Test Link ↗</button>
+              </div>
+              <div class="hint">Apny Facebook page ka poora link dalein (e.g. https://facebook.com/HarisTravelAgency)</div>
+            </div>
+
+            <!-- 2. Instagram -->
+            <div class="admin-form-group">
+              <label for="social-ig-input">
+                <span style="color: #E1306C; font-size: 1.1rem; vertical-align: middle;">📸</span>
+                Instagram Profile Link
+              </label>
+              <div style="display: flex; gap: 10px;">
+                <input type="url" id="social-ig-input" placeholder="https://instagram.com/yourprofile" required style="flex: 1;">
+                <button type="button" class="btn-secondary" id="test-ig-btn" style="flex-shrink: 0;">Test Link ↗</button>
+              </div>
+              <div class="hint">Apny Instagram profile ka poora link dalein (e.g. https://instagram.com/HarisTravelAgency)</div>
+            </div>
+
+            <!-- 3. WhatsApp -->
+            <div class="admin-form-group">
+              <label for="social-wa-input">
+                <span style="color: #25D366; font-size: 1.1rem; vertical-align: middle;">💬</span>
+                WhatsApp Number (With Country Code)
+              </label>
+              <div style="display: flex; gap: 10px;">
+                <input type="text" id="social-wa-input" placeholder="923142554547" required style="flex: 1;">
+                <button type="button" class="btn-secondary" id="test-wa-btn" style="flex-shrink: 0;">Test Chat ↗</button>
+              </div>
+              <div class="hint">Bina '+' ya spaces k country code k sath number dalein. Pakistan k liye: <b>923142554547</b></div>
+            </div>
+
+            <div class="action-bar">
+              <button type="submit" class="btn-primary" style="padding: 12px 28px;">
+                💾 Save Social Links
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           TAB 2: SERVICES MANAGEMENT ("apny service offer kary")
+           ======================================================== -->
+      <div class="tab-pane" id="tab-services">
+        <div class="admin-card">
+          <div class="card-title-bar">
+            <div>
+              <h3>🧳 Offer &amp; Manage Services</h3>
+              <p style="color: var(--admin-muted); font-size: 0.88rem; margin: 4px 0 0;">Yahan sy apni nayi travel services add karein ya mojooda services ko real pictures k sath edit/delete karein.</p>
+            </div>
+            <button type="button" class="btn-primary" id="add-service-btn">
+              + Add New Service
+            </button>
+          </div>
+
+          <!-- Services List Container -->
+          <div class="services-admin-list" id="services-admin-list">
+            <!-- Dynamic services items inserted here by admin.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           TAB 2b: DESTINATIONS MANAGEMENT ("new destination bhi add kr sakooo")
+           ======================================================== -->
+      <div class="tab-pane" id="tab-destinations">
+        <div class="admin-card">
+          <div class="card-title-bar">
+            <div>
+              <h3>🌍 Tour &amp; Travel Destinations</h3>
+              <p style="color: var(--admin-muted); font-size: 0.88rem; margin: 4px 0 0;">Yahan sy naye destination packages (jaise Dubai, Turkey, Malaysia, Baku, Maldives) add ya manage karein.</p>
+            </div>
+            <button type="button" class="btn-primary" id="add-destination-btn">
+              + Add New Destination
+            </button>
+          </div>
+
+          <!-- Destinations List Container -->
+          <div class="services-admin-list" id="destinations-admin-list">
+            <!-- Dynamic destinations items inserted here by admin.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           TAB 3: AGENCY & CONTACT SETTINGS
+           ======================================================== -->
+      <div class="tab-pane" id="tab-agency">
+        <div class="admin-card">
+          <div class="card-title-bar">
+            <h3>🏢 Agency Information &amp; Contact Details</h3>
+          </div>
+          <p class="card-desc">Agency ka naam, call number, email, address, or owner bio update karein.</p>
+
+          <form id="agency-settings-form">
+            <div class="form-grid-2">
+              <div class="admin-form-group">
+                <label for="agency_name">Agency Name</label>
+                <input type="text" id="agency_name" name="agency_name" required>
+              </div>
+              <div class="admin-form-group">
+                <label for="tagline">Agency Tagline / Slogan</label>
+                <input type="text" id="tagline" name="tagline" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="admin-form-group">
+                <label for="phone">Phone Number (For Calls)</label>
+                <input type="text" id="phone" name="phone" required placeholder="+92 314 2554547">
+              </div>
+              <div class="admin-form-group">
+                <label for="whatsapp">Official WhatsApp Number</label>
+                <input type="text" id="whatsapp" name="whatsapp" required placeholder="923142554547">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="admin-form-group">
+                <label for="email">Official Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="hariskhan070@gmail.com">
+              </div>
+              <div class="admin-form-group">
+                <label for="address">Office Location / Address</label>
+                <input type="text" id="address" name="address" required placeholder="Gulshan-e-Iqbal, Karachi, Pakistan">
+              </div>
+            </div>
+
+            <div class="admin-form-group">
+              <label for="owner">Proprietor / Owner Name</label>
+              <input type="text" id="owner" name="owner" required placeholder="Haris Khan">
+            </div>
+
+            <div class="admin-form-group">
+              <label for="ownerQuote">Owner Statement / Bio Quote</label>
+              <textarea id="ownerQuote" name="ownerQuote" rows="3"></textarea>
+            </div>
+
+            <div class="action-bar">
+              <button type="submit" class="btn-primary">
+                💾 Save Agency Settings
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           TAB 4: CUSTOMER INQUIRIES & QUOTE LEADS
+           ======================================================== -->
+      <div class="tab-pane" id="tab-inquiries">
+        <div class="admin-card">
+          <div class="card-title-bar">
+            <div>
+              <h3>📩 Customer Inquiries &amp; Quote Requests</h3>
+              <p style="color: var(--admin-muted); font-size: 0.88rem; margin: 4px 0 0;">Website par customers k submit kiye huway quotes or messages.</p>
+            </div>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table class="inquiries-table">
+              <thead>
+                <tr>
+                  <th>Customer Name &amp; Contact</th>
+                  <th>Destination &amp; Date</th>
+                  <th>Service</th>
+                  <th>Message / Notes</th>
+                  <th>Received At</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="inquiries-table-body">
+                <!-- Dynamically populated via admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           TAB 5: SECURITY & CHANGE PASSWORD
+           ======================================================== -->
+      <div class="tab-pane" id="tab-security">
+        <div class="admin-card">
+          <div class="card-title-bar">
+            <h3>🔒 Security &amp; Admin Password</h3>
+          </div>
+          <p class="card-desc">Admin dashboard ka password yahan sy tabdeel karein.</p>
+
+          <form id="security-form" style="max-width: 500px;">
+            <div class="admin-form-group">
+              <label for="old_password">Current Password</label>
+              <input type="password" id="old_password" name="old_password" required placeholder="••••••••">
+            </div>
+            <div class="admin-form-group">
+              <label for="new_password">New Password</label>
+              <input type="password" id="new_password" name="new_password" required placeholder="At least 4 characters">
+            </div>
+            <div class="admin-form-group">
+              <label for="confirm_password">Confirm New Password</label>
+              <input type="password" id="confirm_password" name="confirm_password" required placeholder="••••••••">
+            </div>
+            <div class="action-bar">
+              <button type="submit" class="btn-primary">
+                Update Password
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ========================================================
+       MODAL: ADD / EDIT TRAVEL SERVICE
+       ======================================================== -->
+  <div class="admin-modal-overlay" id="service-edit-modal">
+    <div class="admin-modal-content">
+      <div class="admin-modal-header">
+        <h3 id="service-modal-title">Add / Edit Service</h3>
+        <button type="button" class="close-modal-btn" id="close-service-modal-btn">&times;</button>
+      </div>
+
+      <form id="service-edit-form">
+        <input type="hidden" name="service_id" value="">
+
+        <div class="form-grid-2">
+          <div class="admin-form-group">
+            <label for="srv-title">Service Title *</label>
+            <input type="text" id="srv-title" name="title" required placeholder="e.g. Umrah VIP Package 15 Days">
+          </div>
+          <div class="admin-form-group">
+            <label for="srv-category">Category</label>
+            <select id="srv-category" name="category">
+              <option value="Flights">Flights &amp; Air Tickets</option>
+              <option value="Umrah">Umrah &amp; Hajj</option>
+              <option value="Tours">Holiday &amp; Tour Packages</option>
+              <option value="Visa">Visa Assistance</option>
+              <option value="Hotels">Hotel Reservations</option>
+              <option value="Transport">Airport Transfers &amp; Transport</option>
+              <option value="Corporate">Corporate Travel</option>
+              <option value="Custom">Custom Packages</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="admin-form-group">
+            <label for="srv-icon">Icon / Emoji</label>
+            <input type="text" id="srv-icon" name="icon" placeholder="✈️, 🕋, 🏨, 🛂, 🧳, 💞, etc." value="✈️">
+          </div>
+          <div class="admin-form-group">
+            <label for="srv-price">Pricing Badge / Fare Text</label>
+            <input type="text" id="srv-price" name="priceBadge" placeholder="e.g. From PKR 175,000 / Best Fare Quote">
+          </div>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="srv-img">Real Picture URL</label>
+          <input type="url" id="srv-img" name="image" placeholder="https://images.unsplash.com/... or paste image URL">
+          <div class="hint">Real travel photo ka URL dalein jo card aur modal me cover photo k tor par dikhegi.</div>
+          <div class="img-preview-wrap" id="srv-img-preview" style="display: none;">
+            <img src="" class="img-preview-thumb" id="srv-preview-img" alt="Preview">
+            <span style="font-size: 0.82rem; color: var(--admin-muted);">Live Cover Picture Preview</span>
+          </div>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="srv-desc">Short Description *</label>
+          <textarea id="srv-desc" name="shortDesc" rows="2" required placeholder="Service ka mukhtasir introduction jo card par dikhega..."></textarea>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="srv-header">Highlights Section Header</label>
+          <input type="text" id="srv-header" name="header" value="What we offer" placeholder="e.g. Package includes / What we offer">
+        </div>
+
+        <div class="admin-form-group">
+          <label for="srv-inclusions">Inclusions &amp; Offerings (Har line par aik point dalein)</label>
+          <textarea id="srv-inclusions" name="inclusionsText" rows="4" placeholder="Domestic and international flight tickets
+Direct flights and connecting options
+One-way, return and multi-city bookings
+Date change and refund assistance"></textarea>
+          <div class="hint">Har nayi line par aik feature / inclusion point likhein. Ye modal me checklist k tor par dikhega.</div>
+        </div>
+
+        <div class="admin-form-group" style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
+          <input type="checkbox" id="srv-active" name="active" checked style="width: auto;">
+          <label for="srv-active" style="margin-bottom: 0; cursor: pointer;">
+            <b>Active Service</b> (Visible on the website)
+          </label>
+        </div>
+
+        <div class="action-bar">
+          <button type="submit" class="btn-primary" style="padding: 12px 28px;">
+            Save Service
+          </button>
+          <button type="button" class="btn-secondary" id="cancel-service-modal-btn">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL: ADD / EDIT DESTINATION ("new destination bhi add kr sakooo")
+       ======================================================== -->
+  <div class="admin-modal-overlay" id="destination-edit-modal">
+    <div class="admin-modal-content">
+      <div class="admin-modal-header">
+        <h3 id="destination-modal-title">Add / Edit Destination</h3>
+        <button type="button" class="close-modal-btn" id="close-dest-modal-btn">&times;</button>
+      </div>
+
+      <form id="destination-edit-form">
+        <input type="hidden" name="dest_id" value="">
+
+        <div class="form-grid-2">
+          <div class="admin-form-group">
+            <label for="dest-name">Destination Country / City *</label>
+            <input type="text" id="dest-name" name="name" required placeholder="e.g. Dubai, Malaysia, Turkey, Maldives, Baku, etc.">
+          </div>
+          <div class="admin-form-group">
+            <label for="dest-title">Package Heading / Title *</label>
+            <input type="text" id="dest-title" name="title" required placeholder="e.g. Dubai – 7 Days Luxury Tour">
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="admin-form-group">
+            <label for="dest-price">Package Pricing / Fare Text</label>
+            <input type="text" id="dest-price" name="priceText" placeholder="e.g. PKR 175,000 per person / Price on request">
+          </div>
+          <div class="admin-form-group">
+            <label for="dest-meta">Quick Info / Tags (Comma separated)</label>
+            <input type="text" id="dest-meta" name="metaText" placeholder="7 days / 6 nights, Best: Nov – Mar, Dubai + Abu Dhabi">
+          </div>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="dest-img">Real Cover Picture URL</label>
+          <input type="url" id="dest-img" name="image" placeholder="https://images.unsplash.com/... or paste image URL">
+          <div class="hint">Real travel photo ka URL dalein. Khali chhorne par default picture lag jayegi.</div>
+          <div class="img-preview-wrap" id="dest-img-preview" style="display: none;">
+            <img src="" class="img-preview-thumb" id="dest-preview-img" alt="Preview">
+            <span style="font-size: 0.82rem; color: var(--admin-muted);">Live Cover Picture Preview</span>
+          </div>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="dest-desc">Short Overview *</label>
+          <textarea id="dest-desc" name="shortDesc" rows="2" required placeholder="Destination ka mukhtasir introduction..."></textarea>
+        </div>
+
+        <div class="admin-form-group">
+          <label>📅 Day-by-Day Itinerary (Har Din Kahan Ghumein Gay)</label>
+          <div class="hint">Har din ka title aur schedule alag se add karein. Ye website par customer ko poora plan dikhayega.</div>
+          
+          <div class="itinerary-builder-box">
+            <div id="dest-days-list" class="days-list-wrap">
+              <!-- Day rows dynamically rendered here by admin.js -->
+            </div>
+            <button type="button" class="add-day-btn" id="add-day-row-btn">
+              <span>+ Add Next Day (Agla Din Shamil Karein)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="dest-inclusions">Package Inclusions (Har line par aik feature dalein)</label>
+          <textarea id="dest-inclusions" name="inclusionsText" rows="3" placeholder="Hotel stay with daily breakfast
+Airport pickup & drop-off
+Guided sightseeing as per plan
+Complete visa guidance"></textarea>
+        </div>
+
+        <div class="admin-form-group" style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
+          <input type="checkbox" id="dest-active" name="active" checked style="width: auto;">
+          <label for="dest-active" style="margin-bottom: 0; cursor: pointer;">
+            <b>Active Destination</b> (Visible on the website)
+          </label>
+        </div>
+
+        <div class="action-bar">
+          <button type="submit" class="btn-primary" style="padding: 12px 28px;">
+            Save Destination
+          </button>
+          <button type="button" class="btn-secondary" id="cancel-dest-modal-btn">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Supabase CDN & Config -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <!-- Admin JavaScript -->
+  <script src="js/admin.js"></script>
+</body>
+</html>

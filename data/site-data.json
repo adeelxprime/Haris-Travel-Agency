@@ -1,0 +1,491 @@
+{
+  "agency": {
+    "name": "Haris Travel Agency",
+    "tagline": "Your Journey, Our Responsibility",
+    "owner": "Haris Khan",
+    "role": "Proprietor",
+    "phone": "+92 314 2554547",
+    "phoneClean": "+923142554547",
+    "whatsapp": "923142554547",
+    "email": "hariskhan070@gmail.com",
+    "address": "Gulshan-e-Iqbal, Karachi, Pakistan",
+    "googleReviewLink": "https://www.google.com/maps/search/Haris%20Travel%20Agency%20Gulshan-e-Iqbal%20Karachi",
+    "heroBadge": "✈️ Certified Travel & Tourism Consultants",
+    "heroTitle": "Your Journey, Our Responsibility",
+    "heroSubtitle": "From air tickets and Umrah to honeymoons and corporate travel, Haris Travel Agency plans every trip with clear pricing and a real person beside you, from Gulshan-e-Iqbal, Karachi to the world.",
+    "aboutTitle": "Travel planning, made simple",
+    "aboutLead": "Haris Travel Agency is a customer-focused travel agency providing reliable and convenient travel solutions for individuals, families, business travelers, and groups. We make travel planning simple, comfortable, transparent, and memorable.",
+    "ownerQuote": "Every traveler deserves honest advice and a team that stays reachable. I am committed to your satisfaction, professional travel assistance, and transparent pricing, and I want to be the agent your family comes back to for every trip."
+  },
+  "social": {
+    "facebook": "https://facebook.com/HarisTravelAgency",
+    "instagram": "https://instagram.com/HarisTravelAgency",
+    "whatsapp": "923142554547"
+  },
+  "services": [
+    {
+      "id": "srv-1",
+      "title": "Air Tickets",
+      "category": "Flights",
+      "icon": "✈️",
+      "shortDesc": "Domestic and international tickets on all major airlines.",
+      "priceBadge": "Send route and dates for the best fare",
+      "header": "What we offer",
+      "meta": [],
+      "itinerary": [],
+      "inclusions": [
+        "Emirates, PIA, Turkish Airlines, Qatar Airways, Etihad, Saudia and more",
+        "One-way, return and multi-city bookings",
+        "Group and family fares",
+        "Date changes and cancellation help"
+      ],
+      "active": true,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "srv-2",
+      "title": "Holiday & Tour Packages",
+      "category": "Tours",
+      "icon": "🧳",
+      "shortDesc": "Ready and customised packages with hotels, transfers and sightseeing.",
+      "priceBadge": "Tap a country in Destinations for the full itinerary",
+      "header": "Popular destinations",
+      "meta": [],
+      "itinerary": [],
+      "inclusions": [
+        "Dubai – 7 days",
+        "Malaysia – 7 days",
+        "Turkey – 8 days",
+        "UK, Canada and USA on request"
+      ],
+      "active": true,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "srv-3",
+      "title": "Hotel Reservations",
+      "category": "Hotels",
+      "icon": "🏨",
+      "shortDesc": "Hotels matched to your budget, location and travel dates.",
+      "priceBadge": "Contact us for a quote",
+      "header": "What we offer",
+      "meta": [],
+      "itinerary": [],
+      "inclusions": [
+        "3, 4 and 5 star hotels worldwide",
+        "Close-to-Haram hotels for Umrah",
+        "Family rooms and long-stay options",
+        "Confirmed vouchers before travel"
+      ],
+      "active": true,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "srv-4",
+      "title": "Visa Assistance",
+      "category": "Visa",
+      "icon": "🛂",
+      "shortDesc": "Guidance and document preparation for your visa application.",
+      "priceBadge": "Canada / Italy visa process: PKR 185,000",
+      "header": "Countries we assist with",
+      "meta": [],
+      "itinerary": [],
+      "inclusions": [
+        "Canada and Italy – full process from PKR 185,000",
+        "UAE, Turkey, Malaysia and more",
+        "Document checklist and file preparation",
+        "Appointment and filing support"
+      ],
+      "active": true,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "srv-5",
+      "title": "Umrah Package – Makkah & Madinah (15 Days)",
+      "category": "Umrah",
+      "icon": "🕋",
+      "shortDesc": "A complete Umrah journey with comfortable stays and guided ziyarat.",
+      "priceBadge": "PKR 175,000 per person (15 days)",
+      "header": "Package includes",
+      "meta": [
+        "15 days",
+        "Madinah + Makkah",
+        "Per person"
+      ],
+      "itinerary": [
+        "Day 1: Flight to Saudi Arabia, transfer and check-in at Madinah hotel",
+        "Days 2 – 6: Madinah – Masjid an-Nabawi, Rawdah visit, ziyarat of Uhud, Quba and Qiblatain",
+        "Day 7: Travel to Makkah, wear Ihram at Miqat and perform Umrah",
+        "Days 8 – 13: Makkah – prayers at Masjid al-Haram, ziyarat of Jabal al-Noor, Arafat, Mina and Muzdalifah, optional extra Umrah",
+        "Day 14: Farewell Tawaf",
+        "Day 15: Transfer to airport, return flight"
+      ],
+      "inclusions": [
+        "Hotels in Madinah and Makkah",
+        "Transport between cities and ziyarat",
+        "Guidance for Umrah rituals",
+        "Visa & flights: confirm with us"
+      ],
+      "active": true,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "srv-6",
+      "title": "Honeymoon Packages",
+      "category": "Tours",
+      "icon": "💞",
+      "shortDesc": "Private, romantic trips designed for two.",
+      "priceBadge": "Contact us for a quote",
+      "header": "Popular choices",
+      "meta": [],
+      "itinerary": [],
+      "inclusions": [
+        "Beach escapes such as Langkawi (Malaysia)",
+        "Dubai and Turkey city breaks",
+        "Candlelight dinner and private transfers",
+        "Flowers and cake arrangements"
+      ],
+      "active": true,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "srv-7",
+      "title": "Family Vacations",
+      "category": "Tours",
+      "icon": "👨‍👩‍👧",
+      "shortDesc": "Comfortable plans for all ages, kids and parents included.",
+      "priceBadge": "Contact us for a quote",
+      "header": "What we offer",
+      "meta": [],
+      "itinerary": [],
+      "inclusions": [
+        "Family rooms and connecting hotels",
+        "Kid-friendly activities and theme parks",
+        "Relaxed itineraries",
+        "Halal-food friendly planning"
+      ],
+      "active": true,
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "srv-8",
+      "title": "Corporate Travel",
+      "category": "Corporate",
+      "icon": "💼",
+      "shortDesc": "Business trip management and billing support for companies.",
+      "priceBadge": "Contact us for a quote",
+      "header": "What we offer",
+      "meta": [],
+      "itinerary": [],
+      "inclusions": [
+        "Flight and hotel bookings for staff",
+        "Group and conference travel",
+        "Invoices and billing support",
+        "Priority WhatsApp support"
+      ],
+      "active": true,
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "srv-9",
+      "title": "Airport Transfers",
+      "category": "Transport",
+      "icon": "🚐",
+      "shortDesc": "Reliable pickup and drop-off at departure and arrival.",
+      "priceBadge": "Contact us for a quote",
+      "header": "What we offer",
+      "meta": [],
+      "itinerary": [],
+      "inclusions": [
+        "Private cars and vans",
+        "Meet and greet",
+        "Karachi airport pickup/drop",
+        "Group transport at destinations"
+      ],
+      "active": true,
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "srv-10",
+      "title": "Customized Packages",
+      "category": "Custom",
+      "icon": "🧭",
+      "shortDesc": "Tell us your plan and we will build it around your dates and budget.",
+      "priceBadge": "Contact us for a quote",
+      "header": "How it works",
+      "meta": [],
+      "itinerary": [],
+      "inclusions": [
+        "Share destination, dates and number of travelers",
+        "We send a tailored plan and price",
+        "Change anything until you are happy",
+        "Book through WhatsApp"
+      ],
+      "active": true,
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "destinations": [
+    {
+      "id": "dest-1",
+      "name": "Dubai",
+      "title": "Dubai – 7 Days",
+      "shortDesc": "City of skyscrapers, desert adventure and shopping, ideal for families and couples.",
+      "meta": [
+        "7 days / 6 nights",
+        "Best: Nov – Mar",
+        "Dubai + Abu Dhabi"
+      ],
+      "itinerary": [
+        "Day 1: Arrival, hotel check-in, Dubai Marina & JBR evening walk",
+        "Day 2: Old Dubai – Al Fahidi, Gold & Spice Souk, abra ride on the Creek",
+        "Day 3: Burj Khalifa, Dubai Mall & Fountain show",
+        "Day 4: Desert safari with BBQ dinner",
+        "Day 5: Abu Dhabi day trip – Sheikh Zayed Mosque, Corniche",
+        "Day 6: Museum of the Future / Global Village (seasonal) & shopping",
+        "Day 7: Free morning, airport drop-off"
+      ],
+      "inclusions": [
+        "Hotel stay (as per package)",
+        "Airport transfers & local transport",
+        "Sightseeing as per itinerary"
+      ],
+      "priceText": "Price on request (season, hotel & group size par depend karta hai)",
+      "gradient": "#0f7f9a,#13315c",
+      "svgIcon": "<path d=\"M100 8l4 40 6 20 4 52H86l4-52 6-20z\"/><path d=\"M58 120V84h14v36zM130 120V72h16v48z\"/>",
+      "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+      "active": true
+    },
+    {
+      "id": "dest-australia",
+      "name": "Australia",
+      "title": "Australia – 8 Days Sydney, Melbourne & Gold Coast",
+      "shortDesc": "Experience iconic Sydney landmarks, Melbourne culture, and Gold Coast theme parks and beaches.",
+      "meta": [
+        "8 days / 7 nights",
+        "Best: Sep – Nov, Mar – May",
+        "Sydney + Melbourne + Gold Coast"
+      ],
+      "itinerary": [
+        "Day 1: Arrival at Sydney International Airport, private transfer to hotel, Darling Harbour evening walk",
+        "Day 2: Sydney City Tour – Sydney Opera House, Sydney Harbour Bridge, The Rocks & Bondi Beach",
+        "Day 3: Full-day Blue Mountains tour, Scenic World cable car, Three Sisters lookout & wildlife park",
+        "Day 4: Domestic flight to Melbourne, check-in, Federation Square & Yarra River cruise",
+        "Day 5: Great Ocean Road full-day adventure – 12 Apostles, Loch Ard Gorge & coastal rainforest",
+        "Day 6: Flight to Gold Coast, Surfers Paradise beach, evening waterfront dining",
+        "Day 7: Warner Bros. Movie World theme park or Sea World Marine Park tour",
+        "Day 8: Souvenir shopping, transfer to Gold Coast / Brisbane airport & departure flight"
+      ],
+      "inclusions": [
+        "4-Star hotel accommodation with daily buffet breakfast",
+        "All airport transfers and inter-city transport",
+        "Domestic flights within Australia (Sydney - Melbourne - Gold Coast)",
+        "Blue Mountains and Great Ocean Road guided day tours with tickets",
+        "Theme park entry tickets at Gold Coast",
+        "Complete Australia tourist visa guidance and document file preparation"
+      ],
+      "priceText": "PKR 385,000 per person (8 Days)",
+      "image": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80",
+      "active": true
+    },
+    {
+      "id": "dest-2",
+      "name": "Malaysia",
+      "title": "Malaysia – 7 Days",
+      "shortDesc": "Modern city, hill resorts and tropical islands in a single trip.",
+      "meta": [
+        "7 days / 6 nights",
+        "Best: Mar – Oct",
+        "Kuala Lumpur + Langkawi"
+      ],
+      "itinerary": [
+        "Day 1: Arrival in Kuala Lumpur, hotel check-in",
+        "Day 2: KL city tour – Petronas Towers, Batu Caves, Merdeka Square",
+        "Day 3: Putrajaya & shopping at Bukit Bintang",
+        "Day 4: Genting Highlands, cable car & theme park",
+        "Day 5: Flight to Langkawi, beach & sunset",
+        "Day 6: Langkawi island hopping, Sky Bridge & cable car",
+        "Day 7: Return to KL / departure"
+      ],
+      "inclusions": [
+        "Hotel stay (as per package)",
+        "Airport transfers & local transport",
+        "Sightseeing as per itinerary"
+      ],
+      "priceText": "Price on request (season, hotel & group size par depend karta hai)",
+      "gradient": "#2e7d5b,#0B2545",
+      "svgIcon": "<path d=\"M68 120V34l9-22 9 22v86zM114 120V34l9-22 9 22v86z\"/><rect x=\"86\" y=\"62\" width=\"28\" height=\"5\"/>",
+      "image": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80",
+      "active": true
+    },
+    {
+      "id": "dest-3",
+      "name": "Turkey",
+      "title": "Turkey – 8 Days",
+      "shortDesc": "History, culture and fairy-tale landscapes across two unforgettable regions.",
+      "meta": [
+        "8 days / 7 nights",
+        "Best: Apr – Jun, Sep – Nov",
+        "Istanbul + Cappadocia"
+      ],
+      "itinerary": [
+        "Day 1: Arrival in Istanbul, hotel check-in",
+        "Day 2: Old City – Hagia Sophia, Blue Mosque, Topkapi Palace, Grand Bazaar",
+        "Day 3: Bosphorus cruise, Taksim & Istiklal Street",
+        "Day 4: Bursa or Sapanca day trip",
+        "Day 5: Flight to Cappadocia, Goreme Open Air Museum",
+        "Day 6: Cappadocia valleys & optional hot air balloon (extra)",
+        "Day 7: Return flight to Istanbul, free time",
+        "Day 8: Departure"
+      ],
+      "inclusions": [
+        "Hotel stay (as per package)",
+        "Airport transfers & local transport",
+        "Sightseeing as per itinerary"
+      ],
+      "priceText": "Price on request (season, hotel & group size par depend karta hai)",
+      "gradient": "#8a3b3b,#13315c",
+      "svgIcon": "<path d=\"M60 120V84a40 40 0 0180 0v36z\"/><rect x=\"38\" y=\"30\" width=\"7\" height=\"90\"/><rect x=\"155\" y=\"30\" width=\"7\" height=\"90\"/><path d=\"M41 12l6 18h-12z\"/>",
+      "image": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80",
+      "active": true
+    },
+    {
+      "id": "dest-4",
+      "name": "United Kingdom",
+      "title": "United Kingdom – 7 Days",
+      "shortDesc": "London landmarks plus classic English countryside. UK visa required.",
+      "meta": [
+        "7 days / 6 nights",
+        "Best: May – Sep",
+        "London + day trips"
+      ],
+      "itinerary": [
+        "Day 1: Arrival in London, hotel check-in",
+        "Day 2: Big Ben, Westminster Abbey, London Eye, Buckingham Palace",
+        "Day 3: Tower of London, Tower Bridge, Borough Market",
+        "Day 4: Windsor Castle & Oxford day trip",
+        "Day 5: Stonehenge & Bath day trip",
+        "Day 6: Madame Tussauds, Oxford Street shopping",
+        "Day 7: Departure"
+      ],
+      "inclusions": [
+        "Hotel stay (as per package)",
+        "Airport transfers & local transport",
+        "Sightseeing as per itinerary"
+      ],
+      "priceText": "Price on request (season, hotel & group size par depend karta hai)",
+      "gradient": "#7a2e3b,#13315c",
+      "svgIcon": "<rect x=\"86\" y=\"42\" width=\"28\" height=\"78\"/><path d=\"M86 42l14-32 14 32z\"/><circle cx=\"100\" cy=\"60\" r=\"8\" fill=\"#13315c\"/>",
+      "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80",
+      "active": true
+    },
+    {
+      "id": "dest-5",
+      "name": "Canada",
+      "title": "Canada – 8 Days",
+      "shortDesc": "Big cities and Niagara Falls. Canada visa required; we also guide the visa process.",
+      "meta": [
+        "8 days / 7 nights",
+        "Best: Jun – Sep",
+        "Toronto, Niagara, Ottawa"
+      ],
+      "itinerary": [
+        "Day 1: Arrival in Toronto",
+        "Day 2: Toronto – CN Tower, Harbourfront, Distillery District",
+        "Day 3: Niagara Falls day trip & boat cruise",
+        "Day 4: Drive to Ottawa via Thousand Islands",
+        "Day 5: Ottawa – Parliament Hill, Rideau Canal",
+        "Day 6: Montreal – Old Montreal & Notre-Dame Basilica",
+        "Day 7: Free day / shopping",
+        "Day 8: Departure"
+      ],
+      "inclusions": [
+        "Hotel stay (as per package)",
+        "Airport transfers & local transport",
+        "Sightseeing as per itinerary"
+      ],
+      "priceText": "Price on request (season, hotel & group size par depend karta hai)",
+      "gradient": "#b3263a,#0B2545",
+      "svgIcon": "<path d=\"M97 6h6l2 66h-10z\"/><ellipse cx=\"100\" cy=\"60\" rx=\"14\" ry=\"6\"/><path d=\"M60 120V98h80v22z\"/><path d=\"M100 80l4 8 8-2-3 8 6 4-10 1v8h-10v-8l-10-1 6-4-3-8 8 2z\" fill=\"#C9A24B\"/>",
+      "image": "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80",
+      "active": true
+    },
+    {
+      "id": "dest-6",
+      "name": "America (USA)",
+      "title": "America (USA) – 9 Days New York, Washington DC & Orlando",
+      "shortDesc": "Iconic cities and theme parks. US visa required.",
+      "meta": [
+        "9 days / 8 nights",
+        "Best: Apr – Jun, Sep – Oct",
+        "New York, Washington DC, Orlando"
+      ],
+      "itinerary": [
+        "Day 1: Arrival in New York",
+        "Day 2: Statue of Liberty, Times Square, Central Park",
+        "Day 3: Empire State Building, Brooklyn Bridge, 5th Avenue",
+        "Day 4: Day trip to Niagara Falls (optional)",
+        "Day 5: Train to Washington DC – White House, National Mall",
+        "Day 6: Smithsonian museums, Lincoln Memorial",
+        "Day 7: Fly to Orlando, theme park day",
+        "Day 8: Free day / shopping",
+        "Day 9: Departure"
+      ],
+      "inclusions": [
+        "Hotel stay (as per package)",
+        "Airport transfers & local transport",
+        "Sightseeing as per itinerary"
+      ],
+      "priceText": "Price on request (season, hotel & group size par depend karta hai)",
+      "gradient": "#2a4d8f,#7a1f2e",
+      "svgIcon": "<path d=\"M20 120V76h22v44zM48 120V52h22v68zM76 120V28h24v92zM106 120V64h22v56zM134 120V84h22v36zM162 120V70h20v50z\"/>",
+      "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=800&q=80",
+      "active": true
+    },
+    {
+      "id": "dest-7",
+      "name": "Saudi Arabia",
+      "title": "Umrah Package – Makkah & Madinah (15 Days)",
+      "shortDesc": "A complete Umrah journey with comfortable stays and guided ziyarat.",
+      "meta": [
+        "15 days",
+        "Madinah + Makkah",
+        "Per person"
+      ],
+      "itinerary": [
+        "Day 1: Flight to Saudi Arabia, transfer and check-in at Madinah hotel",
+        "Days 2 – 6: Madinah – Masjid an-Nabawi, Rawdah visit, ziyarat of Uhud, Quba and Qiblatain",
+        "Day 7: Travel to Makkah, wear Ihram at Miqat and perform Umrah",
+        "Days 8 – 13: Makkah – prayers at Masjid al-Haram, ziyarat of Jabal al-Noor, Arafat, Mina and Muzdalifah, optional extra Umrah",
+        "Day 14: Farewell Tawaf",
+        "Day 15: Transfer to airport, return flight"
+      ],
+      "inclusions": [
+        "Hotels in Madinah and Makkah",
+        "Transport between cities and ziyarat",
+        "Guidance for Umrah rituals",
+        "Visa & flights: confirm with us"
+      ],
+      "priceText": "PKR 175,000 per person (15 days)",
+      "gradient": "#0b3b2e,#14A3A0",
+      "svgIcon": "<rect x=\"72\" y=\"52\" width=\"56\" height=\"68\"/><rect x=\"72\" y=\"66\" width=\"56\" height=\"6\" fill=\"#C9A24B\"/><rect x=\"30\" y=\"34\" width=\"8\" height=\"86\"/><rect x=\"162\" y=\"34\" width=\"8\" height=\"86\"/>",
+      "image": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80",
+      "active": true
+    }
+  ],
+  "admin": {
+    "username": "admin",
+    "passwordHash": "569646",
+    "sessionToken": ""
+  }
+}

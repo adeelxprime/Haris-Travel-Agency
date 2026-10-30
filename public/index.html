@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Haris Travel Agency | Your Journey, Our Responsibility</title>
+  <meta name="description" content="Haris Travel Agency - Reliable flights, Umrah packages, customized holiday tours, hotel reservations, and visa assistance from Gulshan-e-Iqbal, Karachi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       TOP NAVIGATION BAR
+       ======================================================== -->
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="#home" class="logo" aria-label="Haris Travel Agency Home">
+          <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="21" fill="none" stroke="#14A3A0" stroke-width="2.5"/>
+            <ellipse cx="24" cy="24" rx="9" ry="21" fill="none" stroke="#14A3A0" stroke-width="1.2" opacity=".6"/>
+            <path d="M3 24h42" stroke="#14A3A0" stroke-width="1.2" opacity=".6"/>
+            <path d="M12 33 33 12l-3 12 6 2-3 3-7-1-4 7-3-1 1-8z" fill="#C9A24B" transform="rotate(-8 24 24)"/>
+          </svg>
+          <div class="logo-text">
+            <span data-agency-name>Haris</span>
+            <small>Travel Agency</small>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#social">Social</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-gold btn-sm">Request Quote</a>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       AIRLINES WE BOOK TICKER
+       ======================================================== -->
+  <div class="airline-ticker" aria-label="Partner Airlines">
+    <div class="ticker-track">
+      <span class="airline-chip"><i style="background:#d71921">EK</i> Emirates</span>
+      <span class="airline-chip"><i style="background:#00703c">PK</i> PIA</span>
+      <span class="airline-chip"><i style="background:#c8102e">TK</i> Turkish Airlines</span>
+      <span class="airline-chip"><i style="background:#5c0632">QR</i> Qatar Airways</span>
+      <span class="airline-chip"><i style="background:#b8860b">EY</i> Etihad Airways</span>
+      <span class="airline-chip"><i style="background:#00a859">SV</i> Saudia</span>
+      <span class="airline-chip"><i style="background:#1f5fa8">FZ</i> flydubai</span>
+      <span class="airline-chip"><i style="background:#d2232a">G9</i> Air Arabia</span>
+      <span class="airline-chip"><i style="background:#6a1b9a">9P</i> Fly Jinnah</span>
+      <span class="airline-chip"><i style="background:#0a5db0">PA</i> Airblue</span>
+      <span class="airline-chip"><i style="background:#e07b00">PF</i> AirSial</span>
+      <span class="airline-chip"><i style="background:#0c2d6b">MH</i> Malaysia Airlines</span>
+      <span class="airline-chip"><i style="background:#a6192e">GF</i> Gulf Air</span>
+      <span class="airline-chip"><i style="background:#007a78">WY</i> Oman Air</span>
+      <span class="airline-chip"><i style="background:#075aaa">BA</i> British Airways</span>
+      <span class="airline-chip"><i style="background:#d52b1e">AC</i> Air Canada</span>
+      <!-- Duplicate track for seamless infinite scroll -->
+      <span class="airline-chip"><i style="background:#d71921">EK</i> Emirates</span>
+      <span class="airline-chip"><i style="background:#00703c">PK</i> PIA</span>
+      <span class="airline-chip"><i style="background:#c8102e">TK</i> Turkish Airlines</span>
+      <span class="airline-chip"><i style="background:#5c0632">QR</i> Qatar Airways</span>
+      <span class="airline-chip"><i style="background:#b8860b">EY</i> Etihad Airways</span>
+      <span class="airline-chip"><i style="background:#00a859">SV</i> Saudia</span>
+      <span class="airline-chip"><i style="background:#1f5fa8">FZ</i> flydubai</span>
+      <span class="airline-chip"><i style="background:#d2232a">G9</i> Air Arabia</span>
+      <span class="airline-chip"><i style="background:#6a1b9a">9P</i> Fly Jinnah</span>
+      <span class="airline-chip"><i style="background:#0a5db0">PA</i> Airblue</span>
+      <span class="airline-chip"><i style="background:#e07b00">PF</i> AirSial</span>
+      <span class="airline-chip"><i style="background:#0c2d6b">MH</i> Malaysia Airlines</span>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       HERO SECTION
+       ======================================================== -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">✈️ Certified Travel &amp; Tourism Agency</div>
+          <h1>Your Journey, Our Responsibility</h1>
+          <p>From air tickets and Umrah to honeymoons and corporate travel, Haris Travel Agency plans every trip with clear pricing and dedicated personal support, from Gulshan-e-Iqbal, Karachi to the world.</p>
+          <div class="hero-cta">
+            <a href="#services" class="btn btn-gold">Explore Our Services</a>
+            <a href="#" id="hero-wa-btn" target="_blank" rel="noopener" class="btn btn-wa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-graphic">
+          <svg class="route-svg" viewBox="0 0 420 380" role="img" aria-label="Flight route over a compass">
+            <circle cx="210" cy="190" r="165" fill="none" stroke="#14A3A0" stroke-opacity=".4" stroke-width="2"/>
+            <circle cx="210" cy="190" r="120" fill="none" stroke="#C9A24B" stroke-opacity=".35" stroke-dasharray="2 8" stroke-width="2"/>
+            <path d="M210 25v330M45 190h330" stroke="#fff" stroke-opacity=".15"/>
+            <path d="M210 70l16 120-16 120-16-120z" fill="#C9A24B" fill-opacity=".85"/>
+            <path class="fl" d="M30 310 C 120 120, 300 260, 380 60" fill="none" stroke="#14A3A0" stroke-width="3"/>
+            <circle cx="30" cy="310" r="7" fill="#C9A24B"/>
+            <circle cx="380" cy="60" r="7" fill="#14A3A0"/>
+            <g class="plane"><path d="M-14 8 0-14l14 22-14-5z" fill="#fff" transform="rotate(90)"/></g>
+            <text x="40" y="340" fill="#c6d4e4" font-size="14" font-weight="700">Karachi (KHI)</text>
+            <text x="320" y="50" fill="#c6d4e4" font-size="14" font-weight="700">Worldwide ✈</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ABOUT US SECTION
+       ======================================================== -->
+  <section class="about-section" id="about">
+    <div class="wrap">
+      <div class="text-center">
+        <span class="section-tag">About Haris Travel Agency</span>
+        <h2>Travel planning, made simple</h2>
+        <p class="lead">We are a customer-focused travel agency providing reliable and convenient travel solutions for individuals, families, business travelers, and groups. We make travel planning simple, comfortable, transparent, and memorable.</p>
+      </div>
+
+      <div class="about-cards">
+        <div class="vision-card">
+          <h3>Our Vision</h3>
+          <p>“To become a trusted and recognized travel and tourism brand by delivering exceptional travel experiences, dependable services, and customer-focused solutions.”</p>
+        </div>
+        <div class="vision-card mission">
+          <h3 style="color:#fff;">Our Mission</h3>
+          <p>“To provide professional, affordable, and convenient travel services while maintaining transparency, customer satisfaction, and personalized support throughout every journey.”</p>
+        </div>
+      </div>
+
+      <div class="about-cards" style="margin-top: 24px;">
+        <div class="feature-list-card">
+          <h3>Key Objectives</h3>
+          <ul class="check-list">
+            <li>Provide reliable and professional travel services</li>
+            <li>Deliver prompt and dependable customer support</li>
+            <li>Offer competitive and transparent pricing with no hidden charges</li>
+            <li>Build long-term relationships with travelers and corporate clients</li>
+            <li>Expand travel and tourism services in local and international markets</li>
+          </ul>
+        </div>
+        <div class="feature-list-card">
+          <h3>Who We Travel With</h3>
+          <ul class="check-list">
+            <li>Families and individuals seeking vacation packages</li>
+            <li>Pilgrims planning Umrah &amp; religious journeys</li>
+            <li>Corporate and business executives</li>
+            <li>Students traveling abroad for higher education</li>
+            <li>Couples planning honeymoon retreats</li>
+            <li>Group tours and organization excursions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SERVICES SECTION (DYNAMICALLY MANAGED BY ADMIN!)
+       ======================================================== -->
+  <section class="services-section" id="services">
+    <div class="wrap">
+      <div class="text-center">
+        <span class="section-tag">What We Offer</span>
+        <h2>Products &amp; Travel Services</h2>
+        <p class="lead">Everything for your trip, professionally handled by one dedicated team. Tap any service to view full package details and get instant quotes.</p>
+      </div>
+
+      <!-- Services Grid: Rendered dynamically via JavaScript from site-data.json / Admin -->
+      <div class="services-grid" id="services-grid-container">
+        <!-- Dynamic cards inserted here by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       WHY CHOOSE US / USP
+       ======================================================== -->
+  <section class="usp-section" id="usp">
+    <div class="wrap">
+      <blockquote class="usp-quote">
+        “Personalized Travel Solutions with Reliable Service and Dedicated Customer Support.”
+      </blockquote>
+
+      <div class="usp-grid">
+        <div class="usp-card">
+          <h3>Transparent Guidance</h3>
+          <p>Clear quotes and no surprises. You see exactly what you pay for before committing.</p>
+        </div>
+        <div class="usp-card">
+          <h3>Customized Packages</h3>
+          <p>Tailor-made itineraries built around your dates, family preferences, and budget.</p>
+        </div>
+        <div class="usp-card">
+          <h3>Convenient Booking</h3>
+          <p>Plan and confirm your journey smoothly through WhatsApp, phone call, or online form.</p>
+        </div>
+        <div class="usp-card">
+          <h3>Support Throughout</h3>
+          <p>We stay beside you before, during, and after your trip until you return home safely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       DESTINATIONS WE PLAN
+       ======================================================== -->
+  <section class="destinations-section" id="destinations">
+    <div class="wrap">
+      <div class="text-center">
+        <span class="section-tag">Destinations</span>
+        <h2>Popular Destinations We Plan</h2>
+        <p class="lead">Tell us where you want to go and we will price it with full hotels, transfers, and visa guidance — including countries not shown here.</p>
+      </div>
+
+      <!-- Destinations Grid: Rendered dynamically via JavaScript -->
+      <div class="dest-grid" id="destinations-grid-container">
+        <!-- Dynamic destinations inserted here by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SOCIAL MEDIA SECTION (EXACTLY 3: INSTAGRAM, FACEBOOK, WHATSAPP!)
+       ======================================================== -->
+  <section class="social-section" id="social">
+    <div class="wrap">
+      <div class="text-center">
+        <span class="section-tag">Stay Connected</span>
+        <h2>Official Social Media</h2>
+        <p class="lead">Follow our official accounts for latest deals, Umrah updates, travel tips, and fast direct messaging.</p>
+      </div>
+
+      <!-- Strictly the 3 social channels: Facebook, Instagram, WhatsApp -->
+      <div class="social-cards-grid">
+        <!-- 1. Facebook Card -->
+        <div class="social-card">
+          <div class="social-icon-box fb">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <div class="social-info">
+            <h3>Facebook</h3>
+            <p>Official Page &amp; Community</p>
+          </div>
+          <a href="#" id="social-fb-btn" target="_blank" rel="noopener" class="btn btn-teal">Follow Page</a>
+        </div>
+
+        <!-- 2. Instagram Card -->
+        <div class="social-card">
+          <div class="social-icon-box ig">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </div>
+          <div class="social-info">
+            <h3>Instagram</h3>
+            <p>Visual Stories &amp; Highlights</p>
+          </div>
+          <a href="#" id="social-ig-btn" target="_blank" rel="noopener" class="btn btn-teal">View Profile</a>
+        </div>
+
+        <!-- 3. WhatsApp Card -->
+        <div class="social-card">
+          <div class="social-icon-box wa">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+          </div>
+          <div class="social-info">
+            <h3>WhatsApp</h3>
+            <p id="social-wa-number">+92 314 2554547</p>
+          </div>
+          <a href="#" id="social-wa-btn" target="_blank" rel="noopener" class="btn btn-wa">Chat Live</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       REVIEWS / TESTIMONIALS
+       ======================================================== -->
+  <section class="reviews-section" id="reviews">
+    <div class="wrap">
+      <div class="text-center">
+        <span class="section-tag">Client Feedback</span>
+        <h2><span class="google-icon-pill">G</span> Google Reviews &amp; Testimonials</h2>
+        <p class="lead">Real traveler experiences from our valued customers.</p>
+      </div>
+
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“Clear quote, quick visa guidance, and answers on WhatsApp whenever we had a question about our family trip to Dubai.”</p>
+          <div class="reviewer-name">Adeel M.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“Our Umrah group was flawlessly organized from booking to return. No surprises on hotel distance or fares. Highly recommended!”</p>
+          <div class="reviewer-name">Anas Raza</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“Fast air ticketing, seat selection, and flexible changes for our company’s corporate travel needs. Haris bhai is always reachable.”</p>
+          <div class="reviewer-name">Dr. Hasnain</div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 36px;">
+        <a href="https://www.google.com/maps/search/Haris+Travel+Agency+Gulshan-e-Iqbal+Karachi" target="_blank" rel="noopener" class="btn btn-gold">
+          ★ Write a Google Review
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FAQ SECTION
+       ======================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="wrap">
+      <div class="text-center">
+        <span class="section-tag">Got Questions?</span>
+        <h2>Frequently Asked Questions</h2>
+        <p class="lead">Everything you need to know about booking with Haris Travel Agency.</p>
+      </div>
+
+      <div class="faq-container">
+        <details>
+          <summary>How do I get an exact travel quote?</summary>
+          <p>You can fill out the form below or message us directly on WhatsApp with your travel destination, preferred dates, and number of passengers. We reply with detailed flight options, hotels, and fares within minutes.</p>
+        </details>
+        <details>
+          <summary>Can you arrange visa assistance as well?</summary>
+          <p>Yes! We provide complete visa guidance and document preparation for Dubai, Malaysia, Turkey, UK, Canada, Italy, Schengen states, USA, and Saudi Umrah visas.</p>
+        </details>
+        <details>
+          <summary>Do you make custom packages for families &amp; couples?</summary>
+          <p>Absolutely. Whether it is a honeymoon, a relaxed family vacation with children, or an executive business trip, we tailor every day of the itinerary according to your schedule and budget.</p>
+        </details>
+        <details>
+          <summary>Do you offer customized Umrah packages?</summary>
+          <p>Yes. We offer both economy and VIP 5-star packages near the Haram in Makkah and Madinah, including private luxury transport, ziyarat, and complete ritual guidance.</p>
+        </details>
+        <details>
+          <summary>Will someone assist me during the trip?</summary>
+          <p>Yes. Our WhatsApp support remains active throughout your entire travel period until you return safely back to Karachi.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       OWNER / PROPRIETOR SECTION
+       ======================================================== -->
+  <section class="owner-section" id="owner">
+    <div class="wrap">
+      <div class="owner-box">
+        <div class="owner-avatar" aria-hidden="true">HK</div>
+        <div class="owner-content">
+          <h2>Haris Khan</h2>
+          <span class="owner-role">Proprietor, Haris Travel Agency</span>
+          <p class="lead">“Every traveler deserves honest advice and a team that stays reachable at all hours. I am personally committed to your satisfaction, professional travel assistance, and transparent pricing. My goal is to be the agent your family comes back to for every single trip.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CONTACT & QUOTE REQUEST FORM
+       ======================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <span class="section-tag">Get in Touch</span>
+          <h2>Plan Your Trip With Us</h2>
+          <p class="lead">Send your details and our team will get in touch immediately with the best rates and recommendations.</p>
+
+          <ul class="contact-info-list">
+            <li class="contact-info-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-details">
+                <b>Office Address</b>
+                <span data-agency-address>Gulshan-e-Iqbal, Karachi, Pakistan</span>
+              </div>
+            </li>
+            <li class="contact-info-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-details">
+                <b>Phone / WhatsApp</b>
+                <a href="tel:+923142554547" data-agency-phone>+92 314 2554547</a>
+              </div>
+            </li>
+            <li class="contact-info-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-details">
+                <b>Official Email</b>
+                <a href="mailto:hariskhan070@gmail.com" data-agency-email>hariskhan070@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-info-item">
+              <div class="contact-icon">👤</div>
+              <div class="contact-details">
+                <b>Proprietor</b>
+                <span>Haris Khan</span>
+              </div>
+            </li>
+          </ul>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#" id="contact-wa-btn" target="_blank" rel="noopener" class="btn btn-wa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Quote Request Form -->
+        <div class="quote-form-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 6px;">Request a Customized Quote</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">Fill in your travel preferences and we will reply promptly.</p>
+
+          <form id="quote-form">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="form-name">Your Full Name *</label>
+                <input type="text" id="form-name" name="name" required placeholder="e.g. Muhammad Ali">
+              </div>
+              <div class="form-group">
+                <label for="form-phone">Phone / WhatsApp Number *</label>
+                <input type="tel" id="form-phone" name="phone" required placeholder="e.g. 0314 2554547">
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" name="email" placeholder="e.g. ali@example.com">
+              </div>
+              <div class="form-group">
+                <label for="form-destination">Travel Destination *</label>
+                <input type="text" id="form-destination" name="destination" required placeholder="e.g. Dubai, Umrah, Turkey, etc.">
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="form-date">Estimated Travel Date</label>
+                <input type="date" id="form-date" name="date">
+              </div>
+              <div class="form-group">
+                <label for="quote-service-select">Interested Service</label>
+                <select id="quote-service-select" name="service">
+                  <option value="">Select a Service (Optional)</option>
+                  <!-- Populated dynamically via JS -->
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Special Requirements / Notes</label>
+              <textarea id="form-message" name="message" rows="3" placeholder="Number of travelers, hotel star preference, budget or any specific itinerary requests..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%;">
+              Send Request &amp; Open WhatsApp
+            </button>
+            <div id="form-status-msg" class="form-status-msg" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="24" cy="24" r="21" fill="none" stroke="#14A3A0" stroke-width="2.5"/>
+              <ellipse cx="24" cy="24" rx="9" ry="21" fill="none" stroke="#14A3A0" stroke-width="1.2" opacity=".6"/>
+              <path d="M3 24h42" stroke="#14A3A0" stroke-width="1.2" opacity=".6"/>
+              <path d="M12 33 33 12l-3 12 6 2-3 3-7-1-4 7-3-1 1-8z" fill="#C9A24B" transform="rotate(-8 24 24)"/>
+            </svg>
+            <div class="logo-text">
+              <span style="color:#fff;" data-agency-name>Haris</span>
+              <small>Travel Agency</small>
+            </div>
+          </div>
+          <p>Your Journey, Our Responsibility.<br>
+          Gulshan-e-Iqbal, Karachi, Pakistan<br>
+          Phone: <a href="tel:+923142554547" style="color:#fff;" data-agency-phone>+92 314 2554547</a> | Email: <a href="mailto:hariskhan070@gmail.com" style="color:#fff;" data-agency-email>hariskhan070@gmail.com</a></p>
+        </div>
+
+        <!-- 3 Social Media Links Only: Facebook, Instagram, WhatsApp -->
+        <div class="footer-social-box">
+          <h4>Connect With Us</h4>
+          <div class="footer-social-links">
+            <a href="#" id="footer-fb" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" id="footer-ig" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" id="footer-wa" target="_blank" rel="noopener" class="footer-social-btn" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div><span id="secret-admin-trigger" style="cursor: default;" title="©">&copy;</span> 2026 Haris Travel Agency. All rights reserved. Proprietor: Haris Khan.</div>
+        <div>
+          <a href="#home" style="color: #9cb2cd;">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       FLOATING WHATSAPP BUTTON
+       ======================================================== -->
+  <a href="#" id="floating-wa-btn" class="floating-wa-btn" target="_blank" rel="noopener" aria-label="Chat directly on WhatsApp">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+  </a>
+
+  <!-- ========================================================
+       DETAIL MODAL DIALOG (SERVICES & ITINERARIES)
+       ======================================================== -->
+  <dialog id="detail-modal" class="custom-modal"></dialog>
+
+  <!-- Supabase CDN & Config -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <!-- Main Website JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

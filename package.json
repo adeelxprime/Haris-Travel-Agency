@@ -1,0 +1,13 @@
+{
+  "name": "haris-travel-agency",
+  "version": "1.0.0",
+  "description": "Haris Travel Agency dynamic website with Admin Panel for social media and services management",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["travel-agency", "admin-panel", "pakistan-travel", "karachi"],
+  "author": "Haris Travel Agency",
+  "license": "ISC"
+}
