@@ -69,10 +69,12 @@
     // 1. If Supabase is configured
     if (window.DB && window.DB.isSupabase()) {
       try {
-        const content = await window.DB.getContent();
-        const allServices = await window.DB.getAdminServices();
-        const allDestinations = await window.DB.getAdminDestinations();
-        const inquiries = await window.DB.getInquiries();
+        const [content, allServices, allDestinations, inquiries] = await Promise.all([
+          window.DB.getContent(),
+          window.DB.getAdminServices(),
+          window.DB.getAdminDestinations(),
+          window.DB.getInquiries()
+        ]);
 
         if (content) {
           adminData = {
@@ -921,14 +923,16 @@
     }
   }
 
-  // Reload admin data from server or Supabase
+  // Reload admin data from server or Supabase (Parallel fetch)
   async function reloadAdminData() {
     if (window.DB && window.DB.isSupabase()) {
       try {
-        const content = await window.DB.getContent();
-        const allServices = await window.DB.getAdminServices();
-        const allDestinations = await window.DB.getAdminDestinations();
-        const inquiries = await window.DB.getInquiries();
+        const [content, allServices, allDestinations, inquiries] = await Promise.all([
+          window.DB.getContent(),
+          window.DB.getAdminServices(),
+          window.DB.getAdminDestinations(),
+          window.DB.getInquiries()
+        ]);
 
         if (content) {
           adminData = {

@@ -540,10 +540,11 @@ const server = http.createServer(async (req, res) => {
 
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+    const isAsset = /\.(css|js|woff2|woff|svg|png|jpg|jpeg|webp|ico)$/i.test(ext);
 
     res.writeHead(200, {
       'Content-Type': contentType,
-      'Cache-Control': 'no-cache'
+      'Cache-Control': isAsset ? 'public, max-age=3600' : 'no-cache'
     });
 
     const stream = fs.createReadStream(filePath);

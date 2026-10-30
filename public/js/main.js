@@ -1,12 +1,12 @@
 /**
- * Haris Travel Agency - Main Website JavaScript
- * Handles dynamic content, services modal, social media links, and quote submissions.
+ * Haris Travel Agency - Blazing Fast Main Website JavaScript
+ * Optimized for 0ms First Paint, Cache-First SWR, and Direct Cloud Sync.
  */
 
 (function () {
   'use strict';
 
-  // Fallback default state in case API server is offline or opened via file://
+  // Fallback default state with complete 10 services & 8 destinations
   const DEFAULT_DATA = {
     agency: {
       name: "Haris Travel Agency",
@@ -25,8 +25,385 @@
       instagram: "https://instagram.com/HarisTravelAgency",
       whatsapp: "923142554547"
     },
-    services: [],
-    destinations: []
+    services: [
+      {
+        id: "srv-1",
+        title: "Air Tickets",
+        category: "Flights",
+        icon: "✈️",
+        shortDesc: "Domestic and international tickets on all major airlines at competitive fares.",
+        priceBadge: "Best Fare Quote on Request",
+        header: "What we offer",
+        inclusions: [
+          "Emirates, PIA, Turkish Airlines, Qatar Airways, Etihad, Saudia and more",
+          "One-way, return and multi-city bookings",
+          "Group and family fares",
+          "Date changes and cancellation help"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=75"
+      },
+      {
+        id: "srv-2",
+        title: "Holiday & Tour Packages",
+        category: "Tours",
+        icon: "🧳",
+        shortDesc: "Ready and customised packages with hotels, transfers and sightseeing.",
+        priceBadge: "Full Itinerary in Destinations",
+        header: "Popular destinations",
+        inclusions: [
+          "Dubai – 7 days packages",
+          "Malaysia – 7 days beach & hill tours",
+          "Turkey – 8 days Istanbul & Cappadocia",
+          "UK, Canada, USA & Australia on request"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=75"
+      },
+      {
+        id: "srv-3",
+        title: "Hotel Reservations",
+        category: "Hotels",
+        icon: "🏨",
+        shortDesc: "Hotels matched to your budget, location and travel dates worldwide.",
+        priceBadge: "Confirmed Vouchers",
+        header: "What we offer",
+        inclusions: [
+          "3, 4 and 5 star hotels worldwide",
+          "Close-to-Haram hotels for Umrah",
+          "Family rooms and long-stay options",
+          "Confirmed vouchers before travel"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=75"
+      },
+      {
+        id: "srv-4",
+        title: "Visa Assistance",
+        category: "Visa",
+        icon: "🛂",
+        shortDesc: "Complete guidance and file preparation for your visa applications.",
+        priceBadge: "Canada / Italy from PKR 185,000",
+        header: "Countries we assist with",
+        inclusions: [
+          "Canada and Italy – complete file process",
+          "UAE, Turkey, Malaysia, UK and USA visas",
+          "Document checklist and appointment guidance",
+          "Expert application file checking"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=75"
+      },
+      {
+        id: "srv-5",
+        title: "Umrah Package – Makkah & Madinah (15 Days)",
+        category: "Umrah",
+        icon: "🕋",
+        shortDesc: "A complete spiritual Umrah journey with comfortable stays and guided ziyarat.",
+        priceBadge: "PKR 175,000 per person (15 days)",
+        header: "Package includes",
+        inclusions: [
+          "Hotels in Madinah and Makkah near Haram",
+          "AC transport between cities and ziyarat points",
+          "Guided Umrah rituals and ziyarat tour",
+          "Visa and flight assistance"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=600&q=75"
+      },
+      {
+        id: "srv-6",
+        title: "Honeymoon Packages",
+        category: "Tours",
+        icon: "💞",
+        shortDesc: "Romantic escapes designed for newlyweds with candlelight dinners and private tours.",
+        priceBadge: "Special Couple Deals",
+        header: "What we offer",
+        inclusions: [
+          "Luxury resorts in Maldives, Bali, Turkey and Dubai",
+          "Candlelight dinners and flower bed arrangements",
+          "Private airport and island transfers",
+          "Flexible pace with private tours"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=75"
+      },
+      {
+        id: "srv-7",
+        title: "Family Vacations",
+        category: "Tours",
+        icon: "👨‍👩‍👧",
+        shortDesc: "Comfortable travel plans for all ages with kid-friendly activities.",
+        priceBadge: "Family Savings Deals",
+        header: "What we offer",
+        inclusions: [
+          "Family suites and connecting rooms",
+          "Theme park passes and kid attractions",
+          "Relaxed itineraries without rushing",
+          "Halal dining options included"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=600&q=75"
+      },
+      {
+        id: "srv-8",
+        title: "Corporate Travel",
+        category: "Corporate",
+        icon: "💼",
+        shortDesc: "Business trip management, flexible bookings and corporate billing.",
+        priceBadge: "Corporate Desk",
+        header: "What we offer",
+        inclusions: [
+          "Flight and hotel bookings for company staff",
+          "Annual conference and delegation travel",
+          "Flexible date changes and refund tracking",
+          "Official invoices and payment records"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=75"
+      },
+      {
+        id: "srv-9",
+        title: "Airport Transfers",
+        category: "Transport",
+        icon: "🚐",
+        shortDesc: "Reliable airport pickup and drop-off in clean, comfortable AC vehicles.",
+        priceBadge: "Fixed Transparent Rates",
+        header: "What we offer",
+        inclusions: [
+          "Private sedans, SUVs, and passenger vans",
+          "Karachi airport pickup & drop services",
+          "Meet and greet at international terminals",
+          "Flight delay tracking included"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=75"
+      },
+      {
+        id: "srv-10",
+        title: "Customized Packages",
+        category: "Custom",
+        icon: "🧭",
+        shortDesc: "Tell us your plan, travel dates and budget; we build your ideal itinerary.",
+        priceBadge: "100% Tailored to You",
+        header: "How it works",
+        inclusions: [
+          "Choose any city or country worldwide",
+          "Set your own departure date and trip duration",
+          "Select hotels matching your exact budget",
+          "Direct WhatsApp coordination with our trip planner"
+        ],
+        active: true,
+        image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=75"
+      }
+    ],
+    destinations: [
+      {
+        id: "dest-1",
+        name: "Dubai",
+        title: "Dubai – 7 Days Luxury Tour",
+        shortDesc: "City of skyscrapers, desert adventure and shopping, ideal for families and couples.",
+        meta: ["7 days / 6 nights", "Best: Nov – Mar", "Dubai + Abu Dhabi"],
+        itinerary: [
+          "Day 1: Arrival, hotel check-in, Dubai Marina & JBR evening walk",
+          "Day 2: Old Dubai – Al Fahidi, Gold & Spice Souk, abra ride on Creek",
+          "Day 3: Burj Khalifa, Dubai Mall & Fountain show",
+          "Day 4: Desert safari with BBQ dinner & dune bashing",
+          "Day 5: Abu Dhabi day trip – Sheikh Zayed Mosque, Corniche",
+          "Day 6: Museum of the Future / Global Village & shopping",
+          "Day 7: Free morning, airport drop-off"
+        ],
+        inclusions: [
+          "4-Star hotel stay with daily breakfast",
+          "Airport transfers & local transport",
+          "Desert Safari with BBQ dinner & show",
+          "Abu Dhabi guided tour with tickets"
+        ],
+        priceText: "Price on request (Season dependent)",
+        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=75",
+        active: true
+      },
+      {
+        id: "dest-australia",
+        name: "Australia",
+        title: "Australia – 8 Days Sydney, Melbourne & Gold Coast",
+        shortDesc: "Experience iconic Sydney landmarks, Melbourne culture, and Gold Coast theme parks and beaches.",
+        meta: ["8 days / 7 nights", "Best: Sep – Nov, Mar – May", "Sydney + Melbourne + Gold Coast"],
+        itinerary: [
+          "Day 1: Arrival at Sydney International Airport, private hotel transfer, Darling Harbour walk",
+          "Day 2: Sydney City Tour – Sydney Opera House, Harbour Bridge climb & Bondi Beach",
+          "Day 3: Full-day Blue Mountains tour, Scenic World cable car & wildlife park",
+          "Day 4: Domestic flight to Melbourne, check-in, Federation Square & Yarra cruise",
+          "Day 5: Great Ocean Road full-day tour – 12 Apostles & Loch Ard Gorge",
+          "Day 6: Flight to Gold Coast, Surfers Paradise beach & sunset dining",
+          "Day 7: Warner Bros. Movie World or Sea World Marine Park tour",
+          "Day 8: Souvenir shopping, transfer to airport & departure flight"
+        ],
+        inclusions: [
+          "4-Star hotel accommodation with daily buffet breakfast",
+          "Domestic flights in Australia (Sydney - Melbourne - Gold Coast)",
+          "Blue Mountains & Great Ocean Road guided day tours",
+          "Gold Coast theme park admission passes",
+          "Complete Australian tourist visa file guidance"
+        ],
+        priceText: "PKR 385,000 per person (8 Days)",
+        image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=600&q=75",
+        active: true
+      },
+      {
+        id: "dest-america",
+        name: "America (USA)",
+        title: "America (USA) – 9 Days New York, Washington DC & Orlando",
+        shortDesc: "Iconic metropolitan cities, historic national monuments, and world-class theme parks.",
+        meta: ["9 days / 8 nights", "Best: Apr – Jun, Sep – Oct", "New York, Washington DC, Orlando"],
+        itinerary: [
+          "Day 1: Arrival at New York JFK, transfer to hotel, Times Square evening walk",
+          "Day 2: Statue of Liberty ferry, Wall Street, 9/11 Memorial & Empire State Building",
+          "Day 3: Brooklyn Bridge walk, 5th Avenue shopping & Central Park",
+          "Day 4: Scenic Amtrak train to Washington DC, hotel check-in & National Mall",
+          "Day 5: White House photo stop, US Capitol, Lincoln Memorial & Smithsonian museums",
+          "Day 6: Domestic flight to Orlando Florida, resort check-in & Disney Springs walk",
+          "Day 7: Full day at Universal Studios Florida or Walt Disney World Magic Kingdom",
+          "Day 8: Premium outlet shopping, lakefront dining & leisure",
+          "Day 9: Hotel check-out, transfer to Orlando International Airport & departure"
+        ],
+        inclusions: [
+          "Centrally located hotels with breakfast",
+          "Domestic flight NYC to Orlando & Amtrak train ticket",
+          "Statue of Liberty cruise & theme park entry passes",
+          "US tourist visa appointment & documentation guidance"
+        ],
+        priceText: "Price on request",
+        image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=600&q=75",
+        active: true
+      },
+      {
+        id: "dest-2",
+        name: "Malaysia",
+        title: "Malaysia – 7 Days Kuala Lumpur & Langkawi",
+        shortDesc: "Modern vibrant city, hill resorts, and tropical island beaches in a single trip.",
+        meta: ["7 days / 6 nights", "Best: Mar – Oct", "Kuala Lumpur + Langkawi"],
+        itinerary: [
+          "Day 1: Arrival in Kuala Lumpur, hotel check-in",
+          "Day 2: KL city tour – Petronas Towers, Batu Caves, Merdeka Square",
+          "Day 3: Putrajaya & Bukit Bintang shopping",
+          "Day 4: Genting Highlands cable car & indoor theme park",
+          "Day 5: Flight to Langkawi island, beach check-in & sunset",
+          "Day 6: Langkawi island hopping & Sky Bridge cable car",
+          "Day 7: Return flight to KL / departure"
+        ],
+        inclusions: [
+          "Hotels in KL & Langkawi with breakfast",
+          "Domestic flight KL-Langkawi",
+          "Genting cable car tickets",
+          "Airport transfers & tours"
+        ],
+        priceText: "Price on request",
+        image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=600&q=75",
+        active: true
+      },
+      {
+        id: "dest-3",
+        name: "Turkey",
+        title: "Turkey – 8 Days Istanbul & Cappadocia",
+        shortDesc: "History, culture, and fairy-tale landscapes across two unforgettable regions.",
+        meta: ["8 days / 7 nights", "Best: Apr – Jun, Sep – Nov", "Istanbul + Cappadocia"],
+        itinerary: [
+          "Day 1: Arrival in Istanbul, hotel check-in",
+          "Day 2: Old City – Hagia Sophia, Blue Mosque, Topkapi Palace, Grand Bazaar",
+          "Day 3: Bosphorus cruise, Taksim & Istiklal Street",
+          "Day 4: Bursa or Sapanca day trip",
+          "Day 5: Domestic flight to Cappadocia, Goreme Open Air Museum",
+          "Day 6: Cappadocia valleys & optional hot air balloon",
+          "Day 7: Return flight to Istanbul, leisure shopping",
+          "Day 8: Departure flight"
+        ],
+        inclusions: [
+          "4-Star hotels in Istanbul & cave hotel in Cappadocia",
+          "Domestic flights within Turkey",
+          "Bosphorus private cruise",
+          "Historical tours with English speaking guide"
+        ],
+        priceText: "Price on request",
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=600&q=75",
+        active: true
+      },
+      {
+        id: "dest-4",
+        name: "United Kingdom",
+        title: "United Kingdom – 7 Days London & Countryside",
+        shortDesc: "London landmarks plus classic English countryside. UK visa required.",
+        meta: ["7 days / 6 nights", "Best: May – Sep", "London + day trips"],
+        itinerary: [
+          "Day 1: Arrival in London Heathrow, hotel check-in",
+          "Day 2: Big Ben, Westminster Abbey, London Eye, Buckingham Palace",
+          "Day 3: Tower of London, Tower Bridge, Borough Market",
+          "Day 4: Windsor Castle & Oxford University day trip",
+          "Day 5: Stonehenge & Bath guided day excursion",
+          "Day 6: Madame Tussauds & Oxford Street shopping",
+          "Day 7: Heathrow Airport transfer & departure"
+        ],
+        inclusions: [
+          "Centrally located London hotel with breakfast",
+          "Airport pickup & drop-off",
+          "London Eye & Castle tickets",
+          "UK visa file checking guidance"
+        ],
+        priceText: "Price on request",
+        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=75",
+        active: true
+      },
+      {
+        id: "dest-5",
+        name: "Canada",
+        title: "Canada – 8 Days Toronto, Niagara & Ottawa",
+        shortDesc: "Big cities, Canadian culture, and the thunderous Niagara Falls.",
+        meta: ["8 days / 7 nights", "Best: Jun – Sep", "Toronto, Niagara, Ottawa"],
+        itinerary: [
+          "Day 1: Arrival in Toronto Pearson Airport, hotel check-in",
+          "Day 2: Toronto – CN Tower observation deck, Harbourfront",
+          "Day 3: Niagara Falls full-day trip with boat cruise",
+          "Day 4: Drive to Ottawa via 1000 Islands cruise",
+          "Day 5: Ottawa – Parliament Hill, Rideau Canal tour",
+          "Day 6: Montreal – Old Montreal & Notre-Dame Basilica",
+          "Day 7: Free day for shopping and leisure",
+          "Day 8: Airport transfer & departure flight"
+        ],
+        inclusions: [
+          "Hotel stays in Toronto & Montreal with breakfast",
+          "Niagara Falls boat cruise tickets",
+          "Inter-city AC transportation",
+          "Canada visa assistance"
+        ],
+        priceText: "Price on request",
+        image: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=600&q=75",
+        active: true
+      },
+      {
+        id: "dest-7",
+        name: "Saudi Arabia",
+        title: "Umrah Package – Makkah & Madinah (15 Days)",
+        shortDesc: "A complete Umrah spiritual journey with comfortable stays and guided ziyarat.",
+        meta: ["15 days", "Madinah + Makkah", "Per person"],
+        itinerary: [
+          "Day 1: Flight to Saudi Arabia, transfer and check-in at Madinah hotel",
+          "Days 2 – 6: Madinah – Masjid an-Nabawi, Rawdah visit, Uhud, Quba & Qiblatain ziyarat",
+          "Day 7: Travel to Makkah, wear Ihram at Miqat and perform Umrah",
+          "Days 8 – 13: Makkah – Prayers at Masjid al-Haram, Jabal al-Noor, Mina & Muzdalifah",
+          "Day 14: Farewell Tawaf",
+          "Day 15: Transfer to Jeddah airport, return flight"
+        ],
+        inclusions: [
+          "Hotels in Madinah and Makkah near Haram",
+          "AC bus transfer between cities and ziyarat",
+          "Complete guidance for Umrah rituals",
+          "Visa and flight assistance"
+        ],
+        priceText: "PKR 175,000 per person (15 days)",
+        image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=600&q=75",
+        active: true
+      }
+    ]
   };
 
   let siteData = null;
@@ -43,6 +420,16 @@
     }[tag] || tag));
   }
 
+  // Image URL optimizer: forces WebP, exact thumbnail dimensions, and compressed quality
+  function optimizeImageUrl(url, width = 600) {
+    if (!url) return '';
+    if (url.includes('images.unsplash.com')) {
+      const base = url.split('?')[0];
+      return `${base}?auto=format&fit=crop&w=${width}&q=75`;
+    }
+    return url;
+  }
+
   // Generate WhatsApp link helper
   function getWhatsAppUrl(text) {
     const waNumber = (siteData && siteData.social && siteData.social.whatsapp) || '923142554547';
@@ -51,47 +438,47 @@
     return `https://wa.me/${cleanNum}?text=${encodeURIComponent(defaultText)}`;
   }
 
-  // Load content from Supabase, API, or localStorage
-  async function loadSiteContent() {
-    // 1. Try Supabase first if configured
-    if (window.DB && window.DB.isSupabase()) {
-      try {
-        const sbData = await window.DB.getContent();
-        if (sbData) {
-          siteData = sbData;
-          console.log('✅ Loaded content directly from Supabase!');
-          renderPage();
-          return;
-        }
-      } catch (err) {
-        console.warn('Supabase fetch failed, trying local fallback...', err);
+  // Ultra-fast SWR (Stale-While-Revalidate): Render from cache/defaults instantly, then revalidate in background
+  function initSiteContent() {
+    // 1. Instant Render from Cache or Defaults (0ms latency!)
+    try {
+      const cached = localStorage.getItem('haris_travel_cached_data');
+      if (cached) {
+        siteData = JSON.parse(cached);
       }
+    } catch (e) {}
+
+    if (!siteData) {
+      siteData = DEFAULT_DATA;
     }
 
-    // 2. Try Node.js Backend API
+    // Render immediately so user sees complete page in 0ms!
+    renderPage();
+
+    // 2. Background Revalidation (Non-blocking)
+    refreshFromCloud();
+  }
+
+  async function refreshFromCloud() {
     try {
-      const response = await fetch('/api/content');
-      if (response.ok) {
-        siteData = await response.json();
-        try {
-          localStorage.setItem('haris_travel_cached_data', JSON.stringify(siteData));
-        } catch (e) {}
+      let freshData = null;
+      if (window.DB && window.DB.isSupabase()) {
+        freshData = await window.DB.getContent();
       } else {
-        throw new Error('API returned ' + response.status);
+        const response = await fetch('/api/content');
+        if (response.ok) freshData = await response.json();
+      }
+
+      if (freshData && freshData.services && freshData.services.length > 0) {
+        siteData = freshData;
+        try {
+          localStorage.setItem('haris_travel_cached_data', JSON.stringify(freshData));
+        } catch (e) {}
+        renderPage();
       }
     } catch (err) {
-      console.warn('Could not fetch from /api/content, checking cached or default data...', err);
-      try {
-        const cached = localStorage.getItem('haris_travel_cached_data');
-        if (cached) siteData = JSON.parse(cached);
-      } catch (e) {}
-
-      if (!siteData) {
-        siteData = DEFAULT_DATA;
-      }
+      console.warn('Background sync note (using cached data):', err);
     }
-
-    renderPage();
   }
 
   // Render all dynamic elements on the page
@@ -219,13 +606,14 @@
       const title = escapeHTML(srv.title);
       const category = escapeHTML(srv.category || 'Travel Service');
       const desc = escapeHTML(srv.shortDesc || '');
-      const imgUrl = srv.image || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80';
+      const rawImg = srv.image || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828';
+      const imgUrl = optimizeImageUrl(rawImg, 600);
       const badge = srv.priceBadge ? `<div class="service-badge-floating">${escapeHTML(srv.priceBadge)}</div>` : '';
 
       return `
         <div class="service-card" data-service-idx="${idx}" tabindex="0" role="button" aria-label="${title}">
           <div class="service-img-wrap">
-            <img src="${imgUrl}" alt="${title}" class="service-card-img" loading="lazy">
+            <img src="${imgUrl}" alt="${title}" class="service-card-img" loading="lazy" decoding="async">
             <div class="service-img-overlay"></div>
             <span class="service-category-floating">${category}</span>
             ${badge}
@@ -299,8 +687,7 @@
     }
 
     const waInquiryUrl = getWhatsAppUrl(`Hello Haris Travel Agency, I am interested in your service: *${srv.title}*. Please share complete pricing and details.`);
-
-    const imgHtml = srv.image ? `<img src="${srv.image}" alt="${title}" class="modal-cover-img" loading="lazy">` : '';
+    const imgHtml = srv.image ? `<img src="${optimizeImageUrl(srv.image, 800)}" alt="${title}" class="modal-cover-img" loading="lazy">` : '';
 
     modal.innerHTML = `
       <div class="modal-header">
@@ -354,7 +741,8 @@
     container.innerHTML = destinations.map((d, idx) => {
       const isWide = idx === 0 || idx === 3;
       const cardClass = `dest-card ${isWide ? 'wide' : ''}`;
-      const imgHtml = d.image ? `<img src="${d.image}" alt="${escapeHTML(d.name)}" class="dest-bg-img" loading="lazy">` : '';
+      const imgUrl = optimizeImageUrl(d.image || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828', 600);
+      const imgHtml = d.image ? `<img src="${imgUrl}" alt="${escapeHTML(d.name)}" class="dest-bg-img" loading="lazy" decoding="async">` : '';
       const meta = (d.meta && d.meta.length > 0) ? d.meta.join(' • ') : 'Custom Package';
 
       return `
@@ -375,6 +763,13 @@
         const idx = card.getAttribute('data-dest-idx');
         openDestinationModal(destinations[idx]);
       });
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const idx = card.getAttribute('data-dest-idx');
+          openDestinationModal(destinations[idx]);
+        }
+      });
     });
   }
 
@@ -387,7 +782,7 @@
     const title = escapeHTML(dest.title || dest.name);
     const desc = escapeHTML(dest.shortDesc || '');
     const priceText = escapeHTML(dest.priceText || 'Price on request');
-    const imgHtml = dest.image ? `<img src="${dest.image}" alt="${title}" class="modal-cover-img" loading="lazy">` : '';
+    const imgHtml = dest.image ? `<img src="${optimizeImageUrl(dest.image, 800)}" alt="${title}" class="modal-cover-img" loading="lazy">` : '';
     const metaHtml = (dest.meta && dest.meta.length > 0) ? `<div style="margin: 8px 0 16px; font-size: 0.88rem; color: var(--teal); font-weight: 600;">📍 ${escapeHTML(dest.meta.join(' • '))}</div>` : '';
 
     let itineraryHtml = '';
@@ -572,9 +967,9 @@
     });
   }
 
-  // Initialize everything on DOMContentLoaded
+  // Initialize immediately on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', () => {
-    loadSiteContent();
+    initSiteContent();
     initQuoteForm();
     initMobileMenu();
 

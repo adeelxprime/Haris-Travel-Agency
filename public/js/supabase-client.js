@@ -40,38 +40,26 @@
   window.DB = {
     isSupabase: () => Boolean(getClient()),
 
-    // 1. Fetch all public site content (Settings, Services, Destinations)
+    // 1. Fetch all public site content (Settings, Services, Destinations in PARALLEL)
     async getContent() {
       const sb = getClient();
       if (!sb) return null; // Use fallback if not connected
 
       try {
-        // Fetch Settings
-        const { data: settingsData, error: sErr } = await sb
-          .from('site_settings')
-          .select('*')
-          .eq('id', 'main')
-          .single();
+        // Run all queries simultaneously in parallel for maximum speed
+        const [settingsRes, servicesRes, destsRes] = await Promise.all([
+          sb.from('site_settings').select('*').eq('id', 'main').single(),
+          sb.from('services').select('*').eq('active', true).order('created_at', { ascending: true }),
+          sb.from('destinations').select('*').eq('active', true).order('created_at', { ascending: true })
+        ]);
 
-        if (sErr) throw sErr;
+        if (settingsRes.error) throw settingsRes.error;
+        if (servicesRes.error) throw servicesRes.error;
+        if (destsRes.error) throw destsRes.error;
 
-        // Fetch Services (Active only)
-        const { data: servicesData, error: srvErr } = await sb
-          .from('services')
-          .select('*')
-          .eq('active', true)
-          .order('created_at', { ascending: true });
-
-        if (srvErr) throw srvErr;
-
-        // Fetch Destinations
-        const { data: destsData, error: dErr } = await sb
-          .from('destinations')
-          .select('*')
-          .eq('active', true)
-          .order('created_at', { ascending: true });
-
-        if (dErr) throw dErr;
+        const settingsData = settingsRes.data || {};
+        const servicesData = servicesRes.data || [];
+        const destsData = destsRes.data || [];
 
         return {
           agency: {
@@ -90,7 +78,7 @@
             instagram: settingsData.instagram || '',
             whatsapp: settingsData.whatsapp || ''
           },
-          services: (servicesData || []).map(s => ({
+          services: servicesData.map(s => ({
             id: s.id,
             title: s.title,
             category: s.category,
@@ -102,7 +90,7 @@
             inclusions: Array.isArray(s.inclusions) ? s.inclusions : [],
             active: s.active
           })),
-          destinations: (destsData || []).map(d => ({
+          destinations: destsData.map(d => ({
             id: d.id,
             name: d.name,
             title: d.title,
