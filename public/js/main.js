@@ -41,7 +41,7 @@
           "Date changes and cancellation help"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/air-tickets.jpg"
       },
       {
         id: "srv-2",
@@ -58,7 +58,7 @@
           "UK, Canada, USA & Australia on request"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/tour-packages.jpg"
       },
       {
         id: "srv-3",
@@ -75,7 +75,7 @@
           "Confirmed vouchers before travel"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/hotels.jpg"
       },
       {
         id: "srv-4",
@@ -92,7 +92,7 @@
           "Expert application file checking"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/visa.jpg"
       },
       {
         id: "srv-5",
@@ -109,7 +109,7 @@
           "Visa and flight assistance"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/umrah.jpg"
       },
       {
         id: "srv-6",
@@ -126,7 +126,7 @@
           "Flexible pace with private tours"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/honeymoon.jpg"
       },
       {
         id: "srv-7",
@@ -143,7 +143,7 @@
           "Halal dining options included"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/family.jpg"
       },
       {
         id: "srv-8",
@@ -160,7 +160,7 @@
           "Official invoices and payment records"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/corporate.jpg"
       },
       {
         id: "srv-9",
@@ -177,7 +177,7 @@
           "Flight delay tracking included"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/transfers.jpg"
       },
       {
         id: "srv-10",
@@ -194,7 +194,7 @@
           "Direct WhatsApp coordination with our trip planner"
         ],
         active: true,
-        image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=75"
+        image: "images/services/custom.jpg"
       }
     ],
     destinations: [
@@ -220,7 +220,7 @@
           "Abu Dhabi guided tour with tickets"
         ],
         priceText: "Price on request (Season dependent)",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=75",
+        image: "images/destinations/dubai.jpg",
         active: true
       },
       {
@@ -247,7 +247,7 @@
           "Complete Australian tourist visa file guidance"
         ],
         priceText: "PKR 385,000 per person (8 Days)",
-        image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=600&q=75",
+        image: "images/destinations/australia.jpg",
         active: true
       },
       {
@@ -274,7 +274,7 @@
           "US tourist visa appointment & documentation guidance"
         ],
         priceText: "Price on request",
-        image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=600&q=75",
+        image: "images/destinations/america.jpg",
         active: true
       },
       {
@@ -299,7 +299,7 @@
           "Airport transfers & tours"
         ],
         priceText: "Price on request",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=600&q=75",
+        image: "images/destinations/malaysia.jpg",
         active: true
       },
       {
@@ -325,7 +325,7 @@
           "Historical tours with English speaking guide"
         ],
         priceText: "Price on request",
-        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=600&q=75",
+        image: "images/destinations/turkey.jpg",
         active: true
       },
       {
@@ -350,7 +350,7 @@
           "UK visa file checking guidance"
         ],
         priceText: "Price on request",
-        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=75",
+        image: "images/destinations/uk.jpg",
         active: true
       },
       {
@@ -376,7 +376,7 @@
           "Canada visa assistance"
         ],
         priceText: "Price on request",
-        image: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=600&q=75",
+        image: "images/destinations/canada.jpg",
         active: true
       },
       {
@@ -400,7 +400,7 @@
           "Visa and flight assistance"
         ],
         priceText: "PKR 175,000 per person (15 days)",
-        image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=600&q=75",
+        image: "images/destinations/saudi.jpg",
         active: true
       }
     ]
@@ -428,6 +428,76 @@
       return `${base}?auto=format&fit=crop&w=${width}&q=75`;
     }
     return url;
+  }
+
+  // Ultra-fast Local Image Fallback Maps (0ms local resolution)
+  const LOCAL_DESTINATION_MAP = {
+    'dubai': 'images/destinations/dubai.jpg',
+    'australia': 'images/destinations/australia.jpg',
+    'america': 'images/destinations/america.jpg',
+    'america (usa)': 'images/destinations/america.jpg',
+    'usa': 'images/destinations/america.jpg',
+    'united states': 'images/destinations/america.jpg',
+    'malaysia': 'images/destinations/malaysia.jpg',
+    'turkey': 'images/destinations/turkey.jpg',
+    'united kingdom': 'images/destinations/uk.jpg',
+    'uk': 'images/destinations/uk.jpg',
+    'london': 'images/destinations/uk.jpg',
+    'canada': 'images/destinations/canada.jpg',
+    'saudi arabia': 'images/destinations/saudi.jpg',
+    'saudi': 'images/destinations/saudi.jpg',
+    'umrah': 'images/destinations/saudi.jpg'
+  };
+
+  const LOCAL_SERVICE_MAP = {
+    'srv-1': 'images/services/air-tickets.jpg',
+    'srv-2': 'images/services/tour-packages.jpg',
+    'srv-3': 'images/services/hotels.jpg',
+    'srv-4': 'images/services/visa.jpg',
+    'srv-5': 'images/services/umrah.jpg',
+    'srv-6': 'images/services/honeymoon.jpg',
+    'srv-7': 'images/services/family.jpg',
+    'srv-8': 'images/services/corporate.jpg',
+    'srv-9': 'images/services/transfers.jpg',
+    'srv-10': 'images/services/custom.jpg'
+  };
+
+  function resolveDestinationImage(d) {
+    if (!d) return 'images/destinations/dubai.jpg';
+    if (d.image && (d.image.startsWith('images/') || d.image.startsWith('/images/'))) {
+      return d.image;
+    }
+    const key = String(d.name || '').toLowerCase().trim();
+    if (LOCAL_DESTINATION_MAP[key]) {
+      return LOCAL_DESTINATION_MAP[key];
+    }
+    return optimizeImageUrl(d.image || 'images/destinations/dubai.jpg', 600);
+  }
+
+  function resolveServiceImage(s) {
+    if (!s) return 'images/services/air-tickets.jpg';
+    if (s.image && (s.image.startsWith('images/') || s.image.startsWith('/images/'))) {
+      return s.image;
+    }
+    if (s.id && LOCAL_SERVICE_MAP[s.id]) {
+      return LOCAL_SERVICE_MAP[s.id];
+    }
+    const key = String(s.title || '').toLowerCase().trim();
+    for (const [titleSubstr, localImg] of Object.entries({
+      'ticket': 'images/services/air-tickets.jpg',
+      'tour': 'images/services/tour-packages.jpg',
+      'hotel': 'images/services/hotels.jpg',
+      'visa': 'images/services/visa.jpg',
+      'umrah': 'images/services/umrah.jpg',
+      'honeymoon': 'images/services/honeymoon.jpg',
+      'family': 'images/services/family.jpg',
+      'corporate': 'images/services/corporate.jpg',
+      'transfer': 'images/services/transfers.jpg',
+      'custom': 'images/services/custom.jpg'
+    })) {
+      if (key.includes(titleSubstr)) return localImg;
+    }
+    return optimizeImageUrl(s.image || 'images/services/air-tickets.jpg', 600);
   }
 
   // Generate WhatsApp link helper
@@ -606,14 +676,15 @@
       const title = escapeHTML(srv.title);
       const category = escapeHTML(srv.category || 'Travel Service');
       const desc = escapeHTML(srv.shortDesc || '');
-      const rawImg = srv.image || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828';
-      const imgUrl = optimizeImageUrl(rawImg, 600);
+      const imgUrl = resolveServiceImage(srv);
       const badge = srv.priceBadge ? `<div class="service-badge-floating">${escapeHTML(srv.priceBadge)}</div>` : '';
+      const isPriority = idx < 3;
+      const loadAttr = isPriority ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"';
 
       return `
         <div class="service-card" data-service-idx="${idx}" tabindex="0" role="button" aria-label="${title}">
           <div class="service-img-wrap">
-            <img src="${imgUrl}" alt="${title}" class="service-card-img" loading="lazy" decoding="async">
+            <img src="${imgUrl}" alt="${title}" class="service-card-img" ${loadAttr}>
             <div class="service-img-overlay"></div>
             <span class="service-category-floating">${category}</span>
             ${badge}
@@ -687,7 +758,8 @@
     }
 
     const waInquiryUrl = getWhatsAppUrl(`Hello Haris Travel Agency, I am interested in your service: *${srv.title}*. Please share complete pricing and details.`);
-    const imgHtml = srv.image ? `<img src="${optimizeImageUrl(srv.image, 800)}" alt="${title}" class="modal-cover-img" loading="lazy">` : '';
+    const srvImgUrl = resolveServiceImage(srv);
+    const imgHtml = srvImgUrl ? `<img src="${srvImgUrl}" alt="${title}" class="modal-cover-img" loading="eager" fetchpriority="high">` : '';
 
     modal.innerHTML = `
       <div class="modal-header">
@@ -741,8 +813,10 @@
     container.innerHTML = destinations.map((d, idx) => {
       const isWide = idx === 0 || idx === 3;
       const cardClass = `dest-card ${isWide ? 'wide' : ''}`;
-      const imgUrl = optimizeImageUrl(d.image || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828', 600);
-      const imgHtml = d.image ? `<img src="${imgUrl}" alt="${escapeHTML(d.name)}" class="dest-bg-img" loading="lazy" decoding="async">` : '';
+      const imgUrl = resolveDestinationImage(d);
+      const isPriority = idx < 4;
+      const loadAttr = isPriority ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"';
+      const imgHtml = `<img src="${imgUrl}" alt="${escapeHTML(d.name)}" class="dest-bg-img" ${loadAttr}>`;
       const meta = (d.meta && d.meta.length > 0) ? d.meta.join(' • ') : 'Custom Package';
 
       return `
@@ -782,7 +856,8 @@
     const title = escapeHTML(dest.title || dest.name);
     const desc = escapeHTML(dest.shortDesc || '');
     const priceText = escapeHTML(dest.priceText || 'Price on request');
-    const imgHtml = dest.image ? `<img src="${optimizeImageUrl(dest.image, 800)}" alt="${title}" class="modal-cover-img" loading="lazy">` : '';
+    const destImgUrl = resolveDestinationImage(dest);
+    const imgHtml = destImgUrl ? `<img src="${destImgUrl}" alt="${title}" class="modal-cover-img" loading="eager" fetchpriority="high">` : '';
     const metaHtml = (dest.meta && dest.meta.length > 0) ? `<div style="margin: 8px 0 16px; font-size: 0.88rem; color: var(--teal); font-weight: 600;">📍 ${escapeHTML(dest.meta.join(' • '))}</div>` : '';
 
     let itineraryHtml = '';

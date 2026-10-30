@@ -233,9 +233,87 @@
         <p class="lead">Tell us where you want to go and we will price it with full hotels, transfers, and visa guidance — including countries not shown here.</p>
       </div>
 
-      <!-- Destinations Grid: Rendered dynamically via JavaScript -->
+      <!-- Destinations Grid: Pre-rendered for instant 0ms load -->
       <div class="dest-grid" id="destinations-grid-container">
-        <!-- Dynamic destinations inserted here by main.js -->
+        <div class="dest-card wide" data-dest-idx="0" role="button" tabindex="0">
+          <img src="images/destinations/dubai.jpg" alt="Dubai" class="dest-bg-img" fetchpriority="high">
+          <div class="dest-overlay"></div>
+          <span class="dest-tag">View Itinerary →</span>
+          <div class="dest-content">
+            <h3 class="dest-name">Dubai</h3>
+            <span class="dest-meta">7 days / 6 nights • Best: Nov – Mar • Dubai + Abu Dhabi</span>
+          </div>
+        </div>
+
+        <div class="dest-card" data-dest-idx="1" role="button" tabindex="0">
+          <img src="images/destinations/australia.jpg" alt="Australia" class="dest-bg-img" fetchpriority="high">
+          <div class="dest-overlay"></div>
+          <span class="dest-tag">View Itinerary →</span>
+          <div class="dest-content">
+            <h3 class="dest-name">Australia</h3>
+            <span class="dest-meta">8 days / 7 nights • Best: Sep – Nov, Mar – May • Sydney + Melbourne + Gold Coast</span>
+          </div>
+        </div>
+
+        <div class="dest-card" data-dest-idx="2" role="button" tabindex="0">
+          <img src="images/destinations/america.jpg" alt="America (USA)" class="dest-bg-img" fetchpriority="high">
+          <div class="dest-overlay"></div>
+          <span class="dest-tag">View Itinerary →</span>
+          <div class="dest-content">
+            <h3 class="dest-name">America (USA)</h3>
+            <span class="dest-meta">9 days / 8 nights • Best: Apr – Jun, Sep – Oct • New York, Washington DC, Orlando</span>
+          </div>
+        </div>
+
+        <div class="dest-card wide" data-dest-idx="3" role="button" tabindex="0">
+          <img src="images/destinations/malaysia.jpg" alt="Malaysia" class="dest-bg-img" fetchpriority="high">
+          <div class="dest-overlay"></div>
+          <span class="dest-tag">View Itinerary →</span>
+          <div class="dest-content">
+            <h3 class="dest-name">Malaysia</h3>
+            <span class="dest-meta">7 days / 6 nights • Best: Mar – Oct • Kuala Lumpur + Langkawi</span>
+          </div>
+        </div>
+
+        <div class="dest-card" data-dest-idx="4" role="button" tabindex="0">
+          <img src="images/destinations/turkey.jpg" alt="Turkey" class="dest-bg-img" loading="lazy" decoding="async">
+          <div class="dest-overlay"></div>
+          <span class="dest-tag">View Itinerary →</span>
+          <div class="dest-content">
+            <h3 class="dest-name">Turkey</h3>
+            <span class="dest-meta">8 days / 7 nights • Best: Apr – Jun, Sep – Nov • Istanbul + Cappadocia</span>
+          </div>
+        </div>
+
+        <div class="dest-card" data-dest-idx="5" role="button" tabindex="0">
+          <img src="images/destinations/uk.jpg" alt="United Kingdom" class="dest-bg-img" loading="lazy" decoding="async">
+          <div class="dest-overlay"></div>
+          <span class="dest-tag">View Itinerary →</span>
+          <div class="dest-content">
+            <h3 class="dest-name">United Kingdom</h3>
+            <span class="dest-meta">7 days / 6 nights • Best: May – Sep • London + day trips</span>
+          </div>
+        </div>
+
+        <div class="dest-card" data-dest-idx="6" role="button" tabindex="0">
+          <img src="images/destinations/canada.jpg" alt="Canada" class="dest-bg-img" loading="lazy" decoding="async">
+          <div class="dest-overlay"></div>
+          <span class="dest-tag">View Itinerary →</span>
+          <div class="dest-content">
+            <h3 class="dest-name">Canada</h3>
+            <span class="dest-meta">8 days / 7 nights • Best: Jun – Sep • Toronto, Niagara, Ottawa</span>
+          </div>
+        </div>
+
+        <div class="dest-card" data-dest-idx="7" role="button" tabindex="0">
+          <img src="images/destinations/saudi.jpg" alt="Saudi Arabia" class="dest-bg-img" loading="lazy" decoding="async">
+          <div class="dest-overlay"></div>
+          <span class="dest-tag">View Itinerary →</span>
+          <div class="dest-content">
+            <h3 class="dest-name">Saudi Arabia</h3>
+            <span class="dest-meta">15 days • Madinah + Makkah • Per person</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>

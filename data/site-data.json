@@ -41,7 +41,7 @@
       ],
       "active": true,
       "featured": true,
-      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/air-tickets.jpg"
     },
     {
       "id": "srv-2",
@@ -61,7 +61,7 @@
       ],
       "active": true,
       "featured": true,
-      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/tour-packages.jpg"
     },
     {
       "id": "srv-3",
@@ -81,7 +81,7 @@
       ],
       "active": true,
       "featured": true,
-      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/hotels.jpg"
     },
     {
       "id": "srv-4",
@@ -101,7 +101,7 @@
       ],
       "active": true,
       "featured": true,
-      "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/visa.jpg"
     },
     {
       "id": "srv-5",
@@ -132,7 +132,7 @@
       ],
       "active": true,
       "featured": true,
-      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/umrah.jpg"
     },
     {
       "id": "srv-6",
@@ -152,7 +152,7 @@
       ],
       "active": true,
       "featured": true,
-      "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/honeymoon.jpg"
     },
     {
       "id": "srv-7",
@@ -172,7 +172,7 @@
       ],
       "active": true,
       "featured": false,
-      "image": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/family.jpg"
     },
     {
       "id": "srv-8",
@@ -192,7 +192,7 @@
       ],
       "active": true,
       "featured": false,
-      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/corporate.jpg"
     },
     {
       "id": "srv-9",
@@ -212,7 +212,7 @@
       ],
       "active": true,
       "featured": false,
-      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/transfers.jpg"
     },
     {
       "id": "srv-10",
@@ -232,7 +232,7 @@
       ],
       "active": true,
       "featured": false,
-      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80"
+      "image": "images/services/custom.jpg"
     }
   ],
   "destinations": [
@@ -263,7 +263,7 @@
       "priceText": "Price on request (season, hotel & group size par depend karta hai)",
       "gradient": "#0f7f9a,#13315c",
       "svgIcon": "<path d=\"M100 8l4 40 6 20 4 52H86l4-52 6-20z\"/><path d=\"M58 120V84h14v36zM130 120V72h16v48z\"/>",
-      "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+      "image": "images/destinations/dubai.jpg",
       "active": true
     },
     {
@@ -295,7 +295,7 @@
         "Complete Australia tourist visa guidance and document file preparation"
       ],
       "priceText": "PKR 385,000 per person (8 Days)",
-      "image": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80",
+      "image": "images/destinations/australia.jpg",
       "active": true
     },
     {
@@ -325,7 +325,7 @@
       "priceText": "Price on request (season, hotel & group size par depend karta hai)",
       "gradient": "#2e7d5b,#0B2545",
       "svgIcon": "<path d=\"M68 120V34l9-22 9 22v86zM114 120V34l9-22 9 22v86z\"/><rect x=\"86\" y=\"62\" width=\"28\" height=\"5\"/>",
-      "image": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80",
+      "image": "images/destinations/malaysia.jpg",
       "active": true
     },
     {
@@ -356,7 +356,7 @@
       "priceText": "Price on request (season, hotel & group size par depend karta hai)",
       "gradient": "#8a3b3b,#13315c",
       "svgIcon": "<path d=\"M60 120V84a40 40 0 0180 0v36z\"/><rect x=\"38\" y=\"30\" width=\"7\" height=\"90\"/><rect x=\"155\" y=\"30\" width=\"7\" height=\"90\"/><path d=\"M41 12l6 18h-12z\"/>",
-      "image": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80",
+      "image": "images/destinations/turkey.jpg",
       "active": true
     },
     {
@@ -386,7 +386,7 @@
       "priceText": "Price on request (season, hotel & group size par depend karta hai)",
       "gradient": "#7a2e3b,#13315c",
       "svgIcon": "<rect x=\"86\" y=\"42\" width=\"28\" height=\"78\"/><path d=\"M86 42l14-32 14 32z\"/><circle cx=\"100\" cy=\"60\" r=\"8\" fill=\"#13315c\"/>",
-      "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80",
+      "image": "images/destinations/uk.jpg",
       "active": true
     },
     {
@@ -417,7 +417,7 @@
       "priceText": "Price on request (season, hotel & group size par depend karta hai)",
       "gradient": "#b3263a,#0B2545",
       "svgIcon": "<path d=\"M97 6h6l2 66h-10z\"/><ellipse cx=\"100\" cy=\"60\" rx=\"14\" ry=\"6\"/><path d=\"M60 120V98h80v22z\"/><path d=\"M100 80l4 8 8-2-3 8 6 4-10 1v8h-10v-8l-10-1 6-4-3-8 8 2z\" fill=\"#C9A24B\"/>",
-      "image": "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80",
+      "image": "images/destinations/canada.jpg",
       "active": true
     },
     {
@@ -449,7 +449,7 @@
       "priceText": "Price on request (season, hotel & group size par depend karta hai)",
       "gradient": "#2a4d8f,#7a1f2e",
       "svgIcon": "<path d=\"M20 120V76h22v44zM48 120V52h22v68zM76 120V28h24v92zM106 120V64h22v56zM134 120V84h22v36zM162 120V70h20v50z\"/>",
-      "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=800&q=80",
+      "image": "images/destinations/america.jpg",
       "active": true
     },
     {
@@ -479,7 +479,7 @@
       "priceText": "PKR 175,000 per person (15 days)",
       "gradient": "#0b3b2e,#14A3A0",
       "svgIcon": "<rect x=\"72\" y=\"52\" width=\"56\" height=\"68\"/><rect x=\"72\" y=\"66\" width=\"56\" height=\"6\" fill=\"#C9A24B\"/><rect x=\"30\" y=\"34\" width=\"8\" height=\"86\"/><rect x=\"162\" y=\"34\" width=\"8\" height=\"86\"/>",
-      "image": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80",
+      "image": "images/destinations/saudi.jpg",
       "active": true
     }
   ],
