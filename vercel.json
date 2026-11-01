@@ -3,6 +3,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/ads.txt", "destination": "/public/ads.txt" },
     { "source": "/admin", "destination": "/public/admin.html" },
     { "source": "/admin.html", "destination": "/public/admin.html" },
     { "source": "/", "destination": "/public/index.html" },
@@ -10,6 +11,19 @@
     { "source": "/(.*)", "destination": "/public/$1" }
   ],
   "headers": [
+    {
+      "source": "/ads.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
     {
       "source": "/(.*)\\.(css|js)",
       "headers": [

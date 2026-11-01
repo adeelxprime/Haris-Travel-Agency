@@ -28,7 +28,8 @@ const MIME_TYPES = {
   '.ico': 'image/x-icon',
   '.webp': 'image/webp',
   '.woff2': 'font/woff2',
-  '.woff': 'font/woff'
+  '.woff': 'font/woff',
+  '.txt': 'text/plain; charset=UTF-8'
 };
 
 // In-memory active session tokens
