@@ -237,6 +237,68 @@ header.site-header {
   text-transform: uppercase;
 }
 
+.nav-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-brand-divider {
+  width: 1px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.header-taap-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  cursor: default;
+  transition: all 0.25s ease;
+}
+
+.header-taap-badge:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--teal);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.header-taap-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  object-fit: cover;
+  padding: 2px;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header-taap-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.header-taap-text .taap-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.header-taap-text .taap-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -290,26 +352,35 @@ header.site-header {
 }
 
 /* ========================================================
-   AIRLINES MARQUEE TICKER
+   AIRLINES MARQUEE TICKER (ORIGINAL HARIS TRAVEL AGENCY DESIGN)
    ======================================================== */
+.al-strip,
 .airline-ticker {
   background: var(--navy-light);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 10px 0;
+  border-bottom: 1px solid #1e3a5c;
   overflow: hidden;
+  padding: 10px 0;
   color: #fff;
   position: relative;
+  z-index: 10;
 }
 
+.al-track,
 .ticker-track {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   width: max-content;
-  animation: marquee 35s linear infinite;
+  animation: alm 40s linear infinite;
 }
 
+.al-strip:hover .al-track,
 .airline-ticker:hover .ticker-track {
   animation-play-state: paused;
+}
+
+@keyframes alm {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes marquee {
@@ -317,29 +388,79 @@ header.site-header {
   100% { transform: translateX(-50%); }
 }
 
+.al,
 .airline-chip {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  padding: 5px 14px 5px 6px;
-  border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  border-radius: 999px;
+  padding: 5px 16px 5px 6px;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
   font-weight: 600;
+  color: #ffffff;
   white-space: nowrap;
+  letter-spacing: 0.2px;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
+.al:hover,
+.airline-chip:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+.al i,
 .airline-chip i {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   display: grid;
   place-items: center;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
   font-style: normal;
-  font-weight: 800;
-  font-size: 0.68rem;
   color: #fff;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.al-logo-wrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.al-logo {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .al-track,
+  .ticker-track {
+    animation: none;
+  }
+  .al-strip,
+  .airline-ticker {
+    overflow-x: auto;
+  }
 }
 
 /* ========================================================
@@ -1178,6 +1299,69 @@ footer.site-footer {
   line-height: 1.6;
 }
 
+.footer-taap-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.footer-taap-badge:hover {
+  border-color: var(--teal);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-taap-logo-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-taap-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-taap-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-taap-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-taap-name {
+  font-size: 0.92rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.footer-taap-sub {
+  font-size: 0.76rem;
+  color: #9cb2cd;
+  line-height: 1.2;
+}
+
 .footer-social-box h4 {
   color: #fff;
   font-size: 1.05rem;
@@ -1208,6 +1392,52 @@ footer.site-footer {
   transform: translateY(-2px);
 }
 
+.footer-taap-wrap {
+  margin-top: 18px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-taap-pic {
+  width: 76px;
+  height: 76px;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 6px;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.footer-taap-pic:hover {
+  transform: scale(1.04);
+}
+
+.footer-taap-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-taap-caption strong {
+  font-size: 0.88rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.footer-taap-caption span {
+  font-size: 0.74rem;
+  color: var(--teal);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -1217,6 +1447,36 @@ footer.site-footer {
   padding-top: 24px;
   font-size: 0.85rem;
   color: #7d96b5;
+}
+
+.footer-developed-by {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #c7d8eb;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.footer-developed-by strong {
+  color: var(--teal);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.footer-credit-center {
+  font-size: 0.88rem;
+  color: #9cb2cd;
+}
+
+.footer-credit-center strong {
+  color: var(--teal);
+  font-weight: 700;
 }
 
 /* ========================================================
@@ -1411,4 +1671,55 @@ dialog.custom-modal::backdrop {
   .form-group-row { grid-template-columns: 1fr; }
   .dest-grid { grid-template-columns: 1fr; }
   .dest-card.wide, .dest-card.tall { grid-column: span 1; grid-row: span 1; }
+  .nav-brand-group { gap: 10px; }
+  .header-taap-text { display: none; }
+  .header-taap-badge { padding: 3px; border-radius: 50%; }
+  .footer-taap-badge { max-width: 100%; }
+  .footer-taap-wrap {
+  margin-top: 18px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-taap-pic {
+  width: 76px;
+  height: 76px;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 6px;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.footer-taap-pic:hover {
+  transform: scale(1.04);
+}
+
+.footer-taap-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-taap-caption strong {
+  font-size: 0.88rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.footer-taap-caption span {
+  font-size: 0.74rem;
+  color: var(--teal);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-bottom { justify-content: center; text-align: center; gap: 8px; }
 }
